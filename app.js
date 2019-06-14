@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
 
   console.log('Connected')
-  const typeWriter = document.getElementByClassName('type-writer')
+  const typeWriter = document.getElementById('type-writer')
   const dataText = typeWriter.getAttribute('data-text')
   let count = 0
   const dataTextLength = dataText.length

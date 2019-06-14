@@ -2,7 +2,7 @@
 *{
   box-sizing: border-box;
 }
-section .hero{
+section.hero{
   height: 100vh;
   background-color:#4f92ff;
   font-size: 4rem;

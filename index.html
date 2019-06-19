@@ -11,11 +11,46 @@
     <link rel="stylesheet" href="style.css">
   </head>
   <body>
+    <nav class="navbar is-dark" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a class="navbar-item" href="#">
+      AK
+    </a>
+
+    <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+
+  <div id="navbarBasicExample" class="navbar-menu">
+
+    <div class="navbar-end">
+      <div class="navbar-item">
+        <div class="buttons">
+          <a class="navbar-item has-text-light">
+            <strong>About</strong>
+          </a>
+          <a class="navbar-item has-text-light">
+             Projects
+          </a>
+          <a class="navbar-item has-text-light">
+            Contact
+          </a>
+
+        </div>
+      </div>
+    </div>
+  </div>
+              <hr />
+</nav>
+
     <section class="hero is-fullheight ">
        <div class="hero-body">
          <div class="container hero-container">
-           <h1 class="title is-1">ALI KURTULUSH</h1>
-           <h2 class="subtitle is-1" id="type-writer" data-text="I'm a Junior Full Stack Developer"> </h2>
+           <h1 class="title is-1 has-text-danger">ALI KURTULUSH</h1>
+           <h2 class="subtitle is-1 has-text-danger" id="type-writer" data-text="I'm a Junior Full Stack Developer"> </h2>
           </div>
       </div>
     </section>
@@ -86,19 +121,98 @@
         </div>
       </div>
     </section>
-    <section class="section">
+    <section class="section projects">
       <div class="container">
+        <h1 class="title is-3 has-text-light">Projects</h1>
         <div class="columns is-multiline">
-          <div class="column is-half">
+          <div class="column is-one-quarter ">
             <div class="project-img">
-              img
+              <div class="card box">
+                <div class="card-image">
+                   <figure class="image is-4by3 ">
+                     <img src="./images/pacman.png" alt="Placeholder image">
+                   </figure>
+                </div>
+              <div class="card-content">
+                <div class="media">
+                  <div class="media-content">
+                    <p class="title is-4">Pacman</p>
+                  </div>
+                </div>
+                <div class="content">
+                  Classic pacman game built in vanilla JavaScript.
+                </div>
+              </div>
+            </div>
+
             </div>
           </div>
-          <div class="column is-half">
+          <div class="column is-one-quarter">
             <div class="project-description">
-              description
+              <div class="card box">
+                <div class="card-image">
+                   <figure class="image is-4by3 ">
+                     <img src="./images/project2.png" alt="Placeholder image">
+                   </figure>
+                </div>
+              <div class="card-content">
+                <div class="media">
+                  <div class="media-content">
+                    <p class="title is-4">London Daily</p>
+                  </div>
+                </div>
+                <div class="content">
+                  My project was about London daily news.
+                </div>
+              </div>
+            </div>
             </div>
           </div>
+          <div class="column is-one-quarter">
+            <div class="project-description">
+              <div class="card box">
+                <div class="card-image">
+                   <figure class="image is-4by3 ">
+                     <img src="./images/project3.png" alt="Placeholder image">
+                   </figure>
+                </div>
+              <div class="card-content">
+                <div class="media">
+                  <div class="media-content">
+                    <p class="title is-4">Events Up</p>
+                  </div>
+                </div>
+                <div class="content">
+                  My project was about musical events.
+
+                </div>
+              </div>
+            </div>
+            </div>
+          </div>
+          <div class="column is-one-quarter">
+            <div class="project-description">
+              <div class="card box">
+                <div class="card-image">
+                   <figure class="image is-4by3 ">
+                     <img src="./images/project4.png" alt="Placeholder image">
+                   </figure>
+                </div>
+              <div class="card-content">
+                <div class="media">
+                  <div class="media-content">
+                    <p class="title is-4">Travelonar</p>
+                  </div>
+                </div>
+                <div class="content">
+                  My project was a city guide for the traveller.
+
+                </div>
+              </div>
+            </div>
+            </div>
+          </div>
+
         </div>
       </div>
     </section>

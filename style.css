@@ -2,17 +2,21 @@
 *{
   box-sizing: border-box;
 }
+
 section.hero{
   height: 100vh;
-  background-color:#4f92ff;
-  font-size: 4rem;
+  background-color:MEDIUMBLUE;
+
+  text-shadow: 2px 2px black;
+  color:red;
 }
+
+
 .hero-container{
   display: flex;
   flex-direction: column;
-  flex-wrap: nowrap;
   align-items: center;
-  align-content: center;
+  justify-content: flex-start;
 
 
 }
@@ -24,4 +28,11 @@ section.hero{
   animation-delay: 2s;
   animation-iteration-count: infinite;
 
+}
+section.projects{
+  background-color: FIREBRICK;
+
+}
+div.card-image{
+  border: 4px solid FIREBRICK;
 }

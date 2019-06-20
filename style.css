@@ -10,6 +10,9 @@ section.hero{
   text-shadow: 2px 2px black;
   color:red;
 }
+html {
+  scroll-behavior: smooth;
+}
 
 
 .hero-container{
@@ -29,10 +32,17 @@ section.hero{
   animation-iteration-count: infinite;
 
 }
-section.projects{
+section#project-section{
   background-color: FIREBRICK;
 
 }
 div.card-image{
   border: 4px solid FIREBRICK;
+}
+
+.project-title span{
+  border-bottom: 4px solid MEDIUMBLUE;
+}
+.project-title.about span{
+  color: FIREBRICK;
 }

@@ -2,7 +2,9 @@
 *{
   box-sizing: border-box;
 }
-
+html{
+  scroll-behavior: smooth;
+}
 section.hero{
   height: 100vh;
   background-color:MEDIUMBLUE;
@@ -10,9 +12,7 @@ section.hero{
   text-shadow: 2px 2px black;
   color:red;
 }
-html {
-  scroll-behavior: smooth;
-}
+
 
 
 .hero-container{
@@ -45,4 +45,7 @@ div.card-image{
 }
 .project-title.about span{
   color: FIREBRICK;
+}
+.myphoto{
+  border-radius: 8px ;
 }

@@ -51,16 +51,32 @@ div.card-image{
 .project-links{
   border-top: 4px solid FIREBRICK;
   display: flex;
-  align-items: space-between;
+  flex-flow: row wrap;
+  justify-content: space-around;
   margin-bottom:0;
 
 }
 .project-links div.column.github{
   border-right: 4px solid FIREBRICK;
 }
+
 .project-links img.icon:hover{
   transform: scale(1.2);
+  visibility: visible;
 }
 #about-section img.icon:hover{
   transform: scale(1.6);
+
+}
+.skill{
+  width: 50px;
+  height: 40px;
+
+}
+.myname{
+  border-bottom: 4px solid white;
+}
+.contact-link-item{
+  margin-left: 10px;
+  margin-bottom: 15px;
 }

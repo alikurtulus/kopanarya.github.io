@@ -1,10 +1,14 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Faster+One|Vast+Shadow&display=swap');
 *{
   box-sizing: border-box;
 }
 html {
   scroll-behavior: smooth;
 
+}
+.navbar-brand a span{
+font-family: 'Faster One', cursive;
 }
 html body{
   font-family: 'Roboto Mono', monospace;
@@ -45,6 +49,10 @@ div.card-image{
 .project-title.about span{
   color: FIREBRICK;
 }
+.myphoto-container{
+  display: flex;
+  justify-content: flex-start;
+}
 .myphoto{
   border-radius: 8px ;
 }
@@ -62,7 +70,7 @@ div.card-image{
 
 .project-links img.icon:hover{
   transform: scale(1.2);
-  visibility: visible;
+
 }
 #about-section img.icon:hover{
   transform: scale(1.6);
@@ -76,7 +84,135 @@ div.card-image{
 .myname{
   border-bottom: 4px solid white;
 }
+.github{
+display: flex;
+justify-content:flex-start;
+
+}
+.website{
+display: flex;
+justify-content:flex-end;
+}
+.project:hover{
+  animation-name: bounce;
+  animation-duration: 2s;
+
+
+}
+.contact-content{
+  width: 100%;
+
+  display: flex;
+  justify-content: center;
+
+}
 .contact-link-item{
+  width: 75%;
+  padding-top: 8px;
   margin-left: 10px;
-  margin-bottom: 15px;
+}
+@media only screen and (max-width: 500px){
+  .myname{
+  font-size: 25px;
+  }
+  .hero-container h2.subtitle{
+    font-size: 15px;
+  }
+ .icon{
+   width: 45px;
+   height: 45px;
+ }
+ .bio p.subtitle{
+   font-size: 14px;
+ }
+
+ .contact-content{
+   width: 100%;
+   font-size: 11px;
+   display: flex;
+   justify-content: center;
+
+ }
+ .contact-link-item{
+   width: 75%;
+   padding-top: 14px;
+   margin-left: 10px;
+ }
+
+ footer{
+   height: 20px;
+   font-size: 13px;
+ }
+
+}
+@media only screen and (min-width: 768px){
+  .myname{
+  font-size: 45px;
+  }
+  .hero-container h2.subtitle{
+    font-size: 33px;
+  }
+  .icon{
+    width: 75px;
+    height: 75px;
+  }
+  .bio p.subtitle{
+    font-size: 25px;
+  }
+  .skill{
+    text-align: center;
+    font-size: 20px;
+   }
+   .media-content p.title{
+     font-size: 30px;
+   }
+   .content{
+     font-size: 25px;
+   }
+   .contact-content{
+     width: 100%;
+     font-size: 20px;
+     display: flex;
+     justify-content: center;
+
+   }
+   .contact-link-item{
+     width: 75%;
+     padding-top: 16px;
+     margin-left: 20px;
+   }
+   h1 span{
+     font-size: 40px;
+   }
+
+
+}
+@media only screen and (min-width: 992px) {
+  .media-content p.title{
+    font-size: 20px;
+  }
+  .content{
+    font-size: 16px;
+    text-align: left;
+  }
+  .icon{
+    width: 45px;
+    height: 45px;
+    animation-name: fadeIn;
+    animation-duration: 3s;
+    animation-delay: 2s;
+
+  }
+  .bio p.subtitle{
+    font-size: 20px;
+    text-align: left;
+  }
+  h1 span{
+    font-size: 35px;
+  }
+  .skill{
+    text-align: center;
+    font-size: 20px;
+   }
+
 }

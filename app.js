@@ -4,6 +4,9 @@ document.addEventListener('DOMContentLoaded', () => {
   const typeWriter = document.getElementById('type-writer')
   const dataText = typeWriter.getAttribute('data-text')
   const mainNavLinks = document.querySelectorAll('nav div.buttons a')
+  const hamburger = document.querySelector('.navbar-burger')
+  const menu = document.querySelector('#'+hamburger.dataset.target)
+
 
   let count = 0
   const dataTextLength = dataText.length
@@ -18,7 +21,7 @@ document.addEventListener('DOMContentLoaded', () => {
     },100)
   }
   setText()
-  
+
   window.addEventListener('scroll', function () {
     const fromTop = window.scrollY
     mainNavLinks.forEach(link => {
@@ -31,6 +34,12 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     })
   })
+  hamburger.addEventListener('click', function(){
+    hamburger.classList.toggle('is-active')
+    menu.classList.toggle('is-active')
+    menu.style.color = 'red'
+  })
+
 
 
 

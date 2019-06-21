@@ -2,8 +2,12 @@
 *{
   box-sizing: border-box;
 }
-html{
+html {
   scroll-behavior: smooth;
+
+}
+html body{
+  font-family: 'Roboto Mono', monospace;
 }
 section.hero{
   height: 100vh;
@@ -12,24 +16,19 @@ section.hero{
   text-shadow: 2px 2px black;
   color:red;
 }
-
-
-
 .hero-container{
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
-
-
 }
 .icon{
-  width: 50px;
-  height: 50px;
+  width: 40px;
+  height: 40px;
   animation-name: fadeIn;
   animation-duration: 3s;
   animation-delay: 2s;
-  animation-iteration-count: infinite;
+
 
 }
 section#project-section{
@@ -48,4 +47,20 @@ div.card-image{
 }
 .myphoto{
   border-radius: 8px ;
+}
+.project-links{
+  border-top: 4px solid FIREBRICK;
+  display: flex;
+  align-items: space-between;
+  margin-bottom:0;
+
+}
+.project-links div.column.github{
+  border-right: 4px solid FIREBRICK;
+}
+.project-links img.icon:hover{
+  transform: scale(1.2);
+}
+#about-section img.icon:hover{
+  transform: scale(1.6);
 }

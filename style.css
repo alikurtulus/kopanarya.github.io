@@ -29,9 +29,9 @@ section.hero{
 .icon{
   width: 40px;
   height: 40px;
-  animation-name: fadeIn;
-  animation-duration: 3s;
-  animation-delay: 2s;
+  -webkit-animation-name: fadeIn;
+  -webkit-animation-duration: 3s;
+  -webkit-animation-delay: 2s;
 
 
 }
@@ -94,8 +94,8 @@ display: flex;
 justify-content:flex-end;
 }
 .project:hover{
-  animation-name: bounce;
-  animation-duration: 2s;
+  -webkit-animation-name: bounce;
+  -webkit-animation-duration: 2s;
 
 
 }

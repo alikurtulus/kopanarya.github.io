@@ -10,6 +10,33 @@ html {
 .navbar-brand a span{
 font-family: 'Faster One', cursive;
 }
+
+.navbar-item a:before, .navbar-item a:after{
+    position: absolute;
+    opacity: 0.5;
+    height: 100%;
+    width: 2px;
+    content: '';
+    background: #FFF;
+    transition: all 0.3s;
+}
+.navbar-item a:before{
+
+    left: 0px;
+    top: 0px;
+}
+.navbar-item a:after{
+
+  right: 0px;
+  bottom: 0px;
+}
+.navbar-item  a:hover:before, .navbar-item a:hover:after
+{
+    opacity: 1;
+    height: 2px;
+    width: 100%;
+}
+
 html body{
   font-family: 'Roboto Mono', monospace;
 }

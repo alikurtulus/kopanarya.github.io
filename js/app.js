@@ -6,7 +6,6 @@
  const hamburger = document.querySelector('.navbar-burger')
  const menu = document.querySelector('#'+hamburger.dataset.target)
  const bestHero = document.querySelector('.hero')
-
  let count = 0
  const dataTextLength = dataText.length
  const skillsIcon = [

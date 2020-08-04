@@ -86,12 +86,19 @@ div.card-image{
 .project-title.about span{
   color: FIREBRICK;
 }
-.myphoto-container{
-  display: flex;
-  justify-content: flex-start;
+.my-image-container{
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ margin: auto;
 }
 .myphoto{
-  border-radius: 8px ;
+  border-radius: 8px;
+  width: 300px;
+  height: 300px;
+}
+.question-guy{
+  color:FIREBRICK !important;
 }
 .project-links{
   border-top: 4px solid FIREBRICK;

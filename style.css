@@ -68,8 +68,8 @@ section.hero{
   color: firebrick;
 }
 .icon{
-  width: 80px;
-  height: 80px;
+  width: 50px !important;
+  height: 50px  !important;
   -webkit-animation-name: fadeIn;
   -webkit-animation-duration: 3s;
   -webkit-animation-delay: 2s;

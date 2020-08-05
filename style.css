@@ -86,6 +86,62 @@ div.card-image{
 .project-title.about span{
   color: FIREBRICK;
 }
+.link-projects-container{
+ position: relative;
+ width: 490px;
+ height: 50px;
+ font-size: 0;
+ margin-top: 1rem;
+ margin-bottom: 1rem;
+}
+.link-projects{
+  font-size: 15px;
+  text-decoration: none;
+  text-transform: uppercase;
+  color:white;
+  line-height: 50px;
+  position: relative;
+  z-index: 1;
+  display: inline-block;
+  text-align: center;
+}
+nav .animation{
+   position: absolute;
+   height: 100%;
+   top: 0;
+   z-index: 0;
+   background-color: white;
+   border-radius: 8px;
+   transition: all .5s ease 0s;
+}
+.link-projects:nth-child(1){
+  width: 80px;
+}
+nav .start-all,.link-projects:nth-child(1):hover~.animation{
+  width: 80px;
+  left: 0;
+}
+.link-projects:nth-child(2){
+  width: 80px;
+}
+nav .start-gaming,.link-projects:nth-child(2):hover~.animation{
+  width: 80px;
+  left: 80px;
+}
+.link-projects:nth-child(3){
+  width: 100px;
+}
+nav .start-fullstack,.link-projects:nth-child(3):hover~.animation{
+  width: 100px;
+  left: 160px;
+}
+.link-projects:nth-child(4){
+  width: 80px;
+}
+nav .start-other,.link-projects:nth-child(4):hover ~.animation{
+  width: 80px;
+  left: 260px;
+}
 .my-image-container{
  display: flex;
  justify-content: center;

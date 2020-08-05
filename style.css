@@ -70,9 +70,6 @@ section.hero{
 .icon{
   width: 50px !important;
   height: 50px  !important;
-  -webkit-animation-name: fadeIn;
-  -webkit-animation-duration: 3s;
-  -webkit-animation-delay: 2s;
 }
 section#project-section{
   background-color: FIREBRICK;
@@ -91,8 +88,8 @@ div.card-image{
  width: 490px;
  height: 50px;
  font-size: 0;
- margin-top: 1rem;
- margin-bottom: 1rem;
+ margin-top: 1.5rem;
+ margin-bottom: 1.5rem;
 }
 .link-projects{
   font-size: 15px;
@@ -112,35 +109,20 @@ nav .animation{
    z-index: 0;
    background-color: white;
    border-radius: 8px;
+   color:firebrick;
    transition: all .5s ease 0s;
 }
 .link-projects:nth-child(1){
   width: 80px;
 }
-nav .start-all,.link-projects:nth-child(1):hover~.animation{
-  width: 80px;
-  left: 0;
-}
 .link-projects:nth-child(2){
   width: 80px;
-}
-nav .start-gaming,.link-projects:nth-child(2):hover~.animation{
-  width: 80px;
-  left: 80px;
 }
 .link-projects:nth-child(3){
   width: 100px;
 }
-nav .start-fullstack,.link-projects:nth-child(3):hover~.animation{
-  width: 100px;
-  left: 160px;
-}
 .link-projects:nth-child(4){
   width: 80px;
-}
-nav .start-other,.link-projects:nth-child(4):hover ~.animation{
-  width: 80px;
-  left: 260px;
 }
 .my-image-container{
  display: flex;
@@ -150,8 +132,8 @@ nav .start-other,.link-projects:nth-child(4):hover ~.animation{
 }
 .myphoto{
   border-radius: 8px;
-  width: 300px;
-  height: 300px;
+  width: 320px;
+  height: 320px;
 }
 .question-guy{
   color:FIREBRICK !important;
@@ -165,12 +147,6 @@ nav .start-other,.link-projects:nth-child(4):hover ~.animation{
 }
 .project-links div.column.github{
   border-right: 4px solid FIREBRICK;
-}
-.project-links img.icon:hover{
-  transform: scale(1.2);
-}
-#about-section img.icon:hover{
-  transform: scale(1.6);
 }
 .skill{
   width: 50px;
@@ -187,21 +163,38 @@ justify-content:flex-start;
 display: flex;
 justify-content:flex-end;
 }
-.project:hover{
-  -webkit-animation-name: bounce;
-  -webkit-animation-duration: 2s;
-}
 .contact-content{
   width: 100%;
   display: flex;
   justify-content: center;
-
 }
 .contact-link-item{
   width: 75%;
   padding-top: 8px;
   margin-left: 10px;
 }
+div.project-div img{
+  -webkit-filter: grayscale(0) blur(0);
+	filter: grayscale(0) blur(0);
+	-webkit-transition: .3s ease-in-out;
+	transition: .3s ease-in-out;
+}
+div.project-div:hover img{
+  -webkit-filter: grayscale(100%) blur(3px);
+  filter: grayscale(100%) blur(3px);
+  cursor: pointer;
+  z-index: -1;
+}
+.project-div:hover  .learn-more-link{
+  opacity: 1 !important;
+  animation: fadeUp;
+  animation-duration: 1s;
+}
+.project-div:hover .project-name{
+  opacity: 1 !important;
+  animation: fadeDown;
+  animation-duration: 1s;
+ }
 @media only screen and (max-width: 500px){
   .myname{
   font-size: 25px;
@@ -264,7 +257,6 @@ justify-content:flex-end;
      font-size: 20px;
      display: flex;
      justify-content: center;
-
    }
    .contact-link-item{
      width: 75%;
@@ -274,8 +266,6 @@ justify-content:flex-end;
    h1 span{
      font-size: 40px;
    }
-
-
 }
 @media only screen and (min-width: 992px) {
   .media-content p.title{
@@ -288,10 +278,6 @@ justify-content:flex-end;
   .icon{
     width: 45px;
     height: 45px;
-    animation-name: fadeIn;
-    animation-duration: 3s;
-    animation-delay: 2s;
-
   }
   .bio p.subtitle{
     font-size: 20px;

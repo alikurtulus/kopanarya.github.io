@@ -180,21 +180,21 @@ div.project-div img{
 	transition: .3s ease-in-out;
 }
 div.project-div:hover img{
-  -webkit-filter: grayscale(100%) blur(3px);
-  filter: grayscale(100%) blur(3px);
+  -webkit-filter: grayscale(100%) blur(8px);
+  filter: grayscale(100%) blur(8px);
   cursor: pointer;
-  z-index: -1;
 }
-.project-div:hover  .learn-more-link{
-  opacity: 1 !important;
-  animation: fadeUp;
-  animation-duration: 1s;
+.overlayTop{
+  top:0;
+  left:0;
+ 
+  width: 100%;
 }
-.project-div:hover .project-name{
-  opacity: 1 !important;
-  animation: fadeDown;
-  animation-duration: 1s;
- }
+div.project-div:hover .overlayTop{
+ height: 100% !important;
+ opacity: 1 !important;
+}
+
 @media only screen and (max-width: 500px){
   .myname{
   font-size: 25px;

@@ -17,22 +17,26 @@
     { link:"https://alikurtulush.dev/SEI-Pacman/",
       github:"https://github.com/kopanarya/SEI-Pacman",
       category:"gaming",
-      imgUrl:"images/pacman-screen.png"
+      imgUrl:"images/pacman-screen.png",
+      projectTitle:"Pacman"
     },
     { link:"https://alikurtulush.dev/Project-2",
       github:"https://github.com/kopanarya/Project-2",
       category:"other",
-      imgUrl:"images/project2.png"
+      imgUrl:"images/project2.png",
+      projectTitle:"London Daily"
     },
     { link:"https://gaeventup.herokuapp.com/#/",
       github:"https://github.com/kopanarya/eventsUp",
       category:"fullStack",
-      imgUrl:"images/project3.png"
+      imgUrl:"images/project3.png",
+      projectTitle:"EventUp"
     },
     { link:"https://travelonar.herokuapp.com/#/",
       github:"https://github.com/kopanarya/Travelonar",
       category:"fullStack",
-      imgUrl:"images/project4.png"
+      imgUrl:"images/project4.png",
+      projectTitle:"Travelonar"
     }]
 
 let count = 0
@@ -115,13 +119,11 @@ window.addEventListener('scroll', function () {
     }
   })
 })
-
 hamburger.addEventListener('click', function(){
   hamburger.classList.toggle('is-active')
   menu.classList.toggle('is-active')
   menu.style.color = 'red'
 })
-
 //We categorize our projects with function
 const makeNewCategoryArr = (category, arr) =>{
   for(let i=0;i<projectChunks.length;i++){
@@ -141,22 +143,27 @@ const changeFontColor= (selectedOne,otherSecond,otherThird,otherFourth) =>{
 const createProjectsView = (selectedArr) => {
   for(let i=0;i<selectedArr.length;i++){
     let mainDiv = document.createElement('div')
+    let textContainer = document.createElement('div')
     let projectImg = document.createElement('img')
     let learnMoreLink = document.createElement('a')
     let projectName = document.createElement('p')
+    textContainer.className='text-container-project overlayTop'
+    textContainer.style.cssText="transition: all .3s ease;color:firebrick; position:absolute;opacity:0;font-weight:800;"
     projectName.className="project-name"
-    projectName.style.cssText="opacity:0;color:firebrick;font-size:1rem; transform: translate(-50%, -50%);-ms-transform: translate(-50%, -50%);  text-align: center; transition: .5s ease; position: absolute;"
+    projectName.textContent=selectedArr[i]['projectTitle']
+    projectName.style.cssText=" font-size:1.6rem; color:firebrick;top:50%;left:50%;transform:translate(-50%,-50%);text-align:center;position:absolute;"
     learnMoreLink.className="learn-more-link"
-    learnMoreLink.style.cssText="opacity:0;font-size:1rem;color:firebrick;border:1px solid firebrick;border-radius:8px; transform: translate(-50%, -50%);-ms-transform: translate(-50%, -50%);  text-align: center;"
+    learnMoreLink.style.cssText="font-size:1.2rem;color:firebrick;border-radius:8px;border:1px solid firebrick;margin: auto;padding:10px;text-align:center;top:70%;left:50%;transform:translate(-50%,-70%);position:absolute;"
+    learnMoreLink.textContent="Learn more"
     mainDiv.className="column is-full-mobile is-one-third-desktop project-div"
-    mainDiv.style.cssText="width:380px;height:370px;margin:1rem 1rem;"
+    mainDiv.style.cssText="width:380px;height:370px;margin:1rem 1rem;display:inline-block;position:relative;"
     projectImg.setAttribute('src',selectedArr[i]['imgUrl'])
     projectImg.className="project-img"
-    projectImg.style.cssText="width:100%;height:100%;display:block;transition:.5s ease; backface-visibility: hidden;"
-    
-    mainDiv.appendChild(projectName)
-    mainDiv.appendChild(learnMoreLink)
+    projectImg.style.cssText="width:380px;height:370px;display:block; "
+    textContainer.appendChild(projectName)
+    textContainer.appendChild(learnMoreLink)
     mainDiv.appendChild(projectImg)
+    mainDiv.appendChild(textContainer)
     projectsContainer.appendChild(mainDiv)
   }
 }

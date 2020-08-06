@@ -1,5 +1,5 @@
  console.log('Connected')
- let scene, camera, renderer, startGeo, stars, selectedIcon,urlIcon
+ let scene, camera, renderer, startGeo, stars, selectedIcon,urlIcon, learnMoreLink
  const typeWriter = document.getElementById('type-writer')
  const dataText = typeWriter.getAttribute('data-text')
  const mainNavLinks = document.querySelectorAll('nav div.buttons a')
@@ -10,6 +10,7 @@
  const gamingLink = document.querySelector('.link-projects-container .link-projects:nth-child(2)')
  const fullStackLink = document.querySelector('.link-projects-container .link-projects:nth-child(3)')
  const otherLink = document.querySelector('.link-projects-container .link-projects:nth-child(4)')
+ const skillsContainer = document.querySelector('.skills-container')
  const animationBar = document.querySelector('.animation')
  const projectsContainer = document.getElementById('projects-container')
  let selectedCategory = []
@@ -17,31 +18,35 @@
     { link:"https://alikurtulush.dev/SEI-Pacman/",
       github:"https://github.com/kopanarya/SEI-Pacman",
       category:"gaming",
-      imgUrl:"images/pacman-screen.png",
-      projectTitle:"Pacman"
+      imgUrl:"images/pacman/pacman-screen.png",
+      projectTitle:"Pacman",
+      projectImagesArr:["/pacman/pacman2.PNG","/pacman/pacman3.PNG"]
     },
     { link:"https://alikurtulush.dev/Project-2",
       github:"https://github.com/kopanarya/Project-2",
       category:"other",
-      imgUrl:"images/project2.png",
-      projectTitle:"London Daily"
+      imgUrl:"images/londondaily/londondaily-screen.png",
+      projectTitle:"London Daily",
+      projectImagesArr:["/londondaily/londondaily2.png","/londondaily/londondaily3.png"]
     },
     { link:"https://gaeventup.herokuapp.com/#/",
       github:"https://github.com/kopanarya/eventsUp",
       category:"fullStack",
-      imgUrl:"images/project3.png",
-      projectTitle:"EventUp"
+      imgUrl:"images/eventup/eventup-screen.png",
+      projectTitle:"EventUp",
+      projectImagesArr:["/eventup/eventup2.png","/eventup/eventup3.png","/eventup/eventup4.png"]
     },
     { link:"https://travelonar.herokuapp.com/#/",
       github:"https://github.com/kopanarya/Travelonar",
       category:"fullStack",
-      imgUrl:"images/project4.png",
-      projectTitle:"Travelonar"
+      imgUrl:"images/travelonar/travelonar-screen.png",
+      projectTitle:"Travelonar",
+      projectImagesArr:["/travelonar/travelonar2.png","/travelonar/travelonar3.png","/travelonar/travelonar4.png","/travelonar/travelonar5.png","/travelonar/travelonar6.png","/travelonar/travelonar7.png"]
     }]
 
 let count = 0
 const dataTextLength = dataText.length
-const skillsIcon = ["api-icon","bootstrap-logo.png","css3-icon.png","github-icon.png","html-5.png","sass-icon.png","npm-icon.png","js-icon.png","npm-icon.png","python-icon.png","react-icon.png","webpack-icon.png","yarnpkg-icon.png","nodejs-icon.png","mongodb-icon.png"]
+const skillsIcon = ["api-icon.png","bootstrap-logo.png","css3-icon.png","github-icon.png","html-5.png","sass-icon.png","npm-icon.png","js-icon.png","npm-icon.png","python-icon.png","react-icon.png","webpack-icon.png","yarnpkg-icon.png","nodejs-icon.png","mongodb-icon.png"]
 const init = () => {
 scene = new THREE.Scene();
 camera = new THREE.PerspectiveCamera(60,window.innerWidth/window.innerHeight,1,1000)
@@ -51,6 +56,21 @@ renderer = new THREE.WebGLRenderer();
 renderer.setSize(window.innerWidth,window.innerHeight);
 bestHero.appendChild(renderer.domElement);
 
+// Create skills icon
+const createSkills = () => {
+  for(let i=0;i<skillsIcon.length;i++){
+    let skillContainer = document.createElement('div')
+    let skillIcon = document.createElement('img')
+    skillContainer.className="column is-one-third-mobile is-one-quarter-desktop"
+    skillIcon.className="icon"
+  
+    skillIcon.setAttribute('src','images/skills/'+skillsIcon[i])
+    skillContainer.appendChild(skillIcon)
+    skillsContainer.appendChild(skillContainer)
+  }
+
+}
+createSkills()
 startGeo = new THREE.Geometry()
 
 for(let i=0; i< 6000; i++){
@@ -64,7 +84,7 @@ for(let i=0; i< 6000; i++){
   startGeo.vertices.push(star)
 }
 selectedIcon = skillsIcon[Math.floor(Math.random() * skillsIcon.length)]
-urlIcon = "images/" + selectedIcon
+urlIcon = "images/skills/" + selectedIcon
 let sprite = new THREE.TextureLoader().load(urlIcon)
 let starMaterial = new THREE.PointsMaterial({
   color: 0xaaaaaa,
@@ -145,7 +165,7 @@ const createProjectsView = (selectedArr) => {
     let mainDiv = document.createElement('div')
     let textContainer = document.createElement('div')
     let projectImg = document.createElement('img')
-    let learnMoreLink = document.createElement('a')
+    learnMoreLink = document.createElement('a')
     let projectName = document.createElement('p')
     textContainer.className='text-container-project overlayTop'
     textContainer.style.cssText="transition: all .3s ease;color:firebrick; position:absolute;opacity:0;font-weight:800;"
@@ -167,7 +187,9 @@ const createProjectsView = (selectedArr) => {
     projectsContainer.appendChild(mainDiv)
   }
 }
+
 createProjectsView(projectChunks)
+
 // Choose any of these as the category of projects
 allLink.addEventListener('click', () => {
   animationBar.style.cssText="width:80px;left:0;"
@@ -200,6 +222,7 @@ otherLink.addEventListener('click', () => {
   createProjectsView(otherArr)
 
 })
+learnMoreLink.addEventListener('click', () => {
 
-
+})
 

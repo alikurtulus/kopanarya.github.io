@@ -176,12 +176,12 @@ justify-content:flex-end;
 div.project-div img{
   -webkit-filter: grayscale(0) blur(0);
 	filter: grayscale(0) blur(0);
-	-webkit-transition: .3s ease-in-out;
-	transition: .3s ease-in-out;
+	-webkit-transition: .1s ease-in-out;
+	transition: .1s ease-in-out;
 }
 div.project-div:hover img{
-  -webkit-filter: grayscale(100%) blur(8px);
-  filter: grayscale(100%) blur(8px);
+  -webkit-filter: grayscale(100%) blur(14px);
+  filter: grayscale(100%) blur(14px);
   cursor: pointer;
 }
 .overlayTop{

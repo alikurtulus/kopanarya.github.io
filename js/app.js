@@ -1,5 +1,5 @@
  console.log('Connected')
- let scene, camera, renderer, startGeo, stars, selectedIcon,urlIcon
+ let scene, camera, renderer, startGeo, stars, selectedIcon,urlIcon, learnMoreLink,chosenProject,leftArrow,rightArrow
  const typeWriter = document.getElementById('type-writer')
  const dataText = typeWriter.getAttribute('data-text')
  const mainNavLinks = document.querySelectorAll('nav div.buttons a')
@@ -10,38 +10,16 @@
  const gamingLink = document.querySelector('.link-projects-container .link-projects:nth-child(2)')
  const fullStackLink = document.querySelector('.link-projects-container .link-projects:nth-child(3)')
  const otherLink = document.querySelector('.link-projects-container .link-projects:nth-child(4)')
+ const skillsContainer = document.querySelector('.skills-container')
  const animationBar = document.querySelector('.animation')
  const projectsContainer = document.getElementById('projects-container')
  let selectedCategory = []
- const projectChunks=[
-    { link:"https://alikurtulush.dev/SEI-Pacman/",
-      github:"https://github.com/kopanarya/SEI-Pacman",
-      category:"gaming",
-      imgUrl:"images/pacman-screen.png",
-      projectTitle:"Pacman"
-    },
-    { link:"https://alikurtulush.dev/Project-2",
-      github:"https://github.com/kopanarya/Project-2",
-      category:"other",
-      imgUrl:"images/project2.png",
-      projectTitle:"London Daily"
-    },
-    { link:"https://gaeventup.herokuapp.com/#/",
-      github:"https://github.com/kopanarya/eventsUp",
-      category:"fullStack",
-      imgUrl:"images/project3.png",
-      projectTitle:"EventUp"
-    },
-    { link:"https://travelonar.herokuapp.com/#/",
-      github:"https://github.com/kopanarya/Travelonar",
-      category:"fullStack",
-      imgUrl:"images/project4.png",
-      projectTitle:"Travelonar"
-    }]
+ let index = 0
+
 
 let count = 0
 const dataTextLength = dataText.length
-const skillsIcon = ["api-icon","bootstrap-logo.png","css3-icon.png","github-icon.png","html-5.png","sass-icon.png","npm-icon.png","js-icon.png","npm-icon.png","python-icon.png","react-icon.png","webpack-icon.png","yarnpkg-icon.png","nodejs-icon.png","mongodb-icon.png"]
+const skillsIcon = ["api-icon.png","bootstrap-logo.png","css3-icon.png","github-icon.png","html-5.png","sass-icon.png","npm-icon.png","js-icon.png","npm-icon.png","python-icon.png","react-icon.png","webpack-icon.png","yarnpkg-icon.png","nodejs-icon.png","mongodb-icon.png"]
 const init = () => {
 scene = new THREE.Scene();
 camera = new THREE.PerspectiveCamera(60,window.innerWidth/window.innerHeight,1,1000)
@@ -51,8 +29,22 @@ renderer = new THREE.WebGLRenderer();
 renderer.setSize(window.innerWidth,window.innerHeight);
 bestHero.appendChild(renderer.domElement);
 
-startGeo = new THREE.Geometry()
+// Create skills icon
+const createSkills = () => {
+  for(let i=0;i<skillsIcon.length;i++){
+    let skillContainer = document.createElement('div')
+    let skillIcon = document.createElement('img')
+    skillContainer.className="column is-one-third-mobile is-one-quarter-desktop"
+    skillIcon.className="icon"
+    skillIcon.setAttribute('src','images/skills/'+skillsIcon[i])
+    skillContainer.appendChild(skillIcon)
+    skillsContainer.appendChild(skillContainer)
+  }
+}
 
+createSkills()
+
+startGeo = new THREE.Geometry()
 for(let i=0; i< 6000; i++){
     let star = new THREE.Vector3(
     Math.random() * 600 - 300,
@@ -64,7 +56,7 @@ for(let i=0; i< 6000; i++){
   startGeo.vertices.push(star)
 }
 selectedIcon = skillsIcon[Math.floor(Math.random() * skillsIcon.length)]
-urlIcon = "images/" + selectedIcon
+urlIcon = "images/skills/" + selectedIcon
 let sprite = new THREE.TextureLoader().load(urlIcon)
 let starMaterial = new THREE.PointsMaterial({
   color: 0xaaaaaa,
@@ -111,7 +103,6 @@ window.addEventListener('scroll', function () {
   const fromTop = window.scrollY
   mainNavLinks.forEach(link => {
     const section = document.querySelector(link.hash)
-
     if (section.offsetTop <= fromTop && section.offsetTop + section.offsetHeight > fromTop) {
       link.classList.add('current')
     } else {
@@ -140,34 +131,184 @@ const changeFontColor= (selectedOne,otherSecond,otherThird,otherFourth) =>{
   otherThird.style.cssText="color:white;"
   otherFourth.style.cssText="color:white;"
 }
+
 const createProjectsView = (selectedArr) => {
+  // We get category's projects and make a section about it.
   for(let i=0;i<selectedArr.length;i++){
     let mainDiv = document.createElement('div')
     let textContainer = document.createElement('div')
     let projectImg = document.createElement('img')
-    let learnMoreLink = document.createElement('a')
+    learnMoreLink = document.createElement('button')
     let projectName = document.createElement('p')
+
     textContainer.className='text-container-project overlayTop'
     textContainer.style.cssText="transition: all .3s ease;color:firebrick; position:absolute;opacity:0;font-weight:800;"
     projectName.className="project-name"
     projectName.textContent=selectedArr[i]['projectTitle']
     projectName.style.cssText=" font-size:1.6rem; color:firebrick;top:50%;left:50%;transform:translate(-50%,-50%);text-align:center;position:absolute;"
-    learnMoreLink.className="learn-more-link"
-    learnMoreLink.style.cssText="font-size:1.2rem;color:firebrick;border-radius:8px;border:1px solid firebrick;margin: auto;padding:10px;text-align:center;top:70%;left:50%;transform:translate(-50%,-70%);position:absolute;"
+    learnMoreLink.className="learn-more-link "
+    learnMoreLink.id=selectedArr[i]['projectTitle']
+    learnMoreLink.style.cssText="font-size:1.2rem;color:firebrick;border-radius:8px;border:1px solid firebrick;margin: auto;padding:10px;text-align:center;top:70%;left:50%;transform:translate(-50%,-70%);position:absolute;outline:none;background-color:Transparent;cursor:pointer;"
     learnMoreLink.textContent="Learn more"
     mainDiv.className="column is-full-mobile is-one-third-desktop project-div"
-    mainDiv.style.cssText="width:380px;height:370px;margin:1rem 1rem;display:inline-block;position:relative;"
+    mainDiv.style.cssText="width:350px;height:370px;margin:1rem 1rem;display:inline-block;position:relative;"
     projectImg.setAttribute('src',selectedArr[i]['imgUrl'])
     projectImg.className="project-img"
     projectImg.style.cssText="width:380px;height:370px;display:block; "
+    learnMoreLink.addEventListener('click', (e) => {
+      selectedProject(e.target.id)
+    })
     textContainer.appendChild(projectName)
     textContainer.appendChild(learnMoreLink)
     mainDiv.appendChild(projectImg)
     mainDiv.appendChild(textContainer)
-    projectsContainer.appendChild(mainDiv)
+    projectsContainer.appendChild(mainDiv) 
   }
 }
+const selectedProject = (id) => {
+  for(let i=0;i<projectChunks.length;i++){
+    if(projectChunks[i]['projectTitle'] === id){
+      chosenProject = projectChunks[i]
+    }
+  }
+  createModal(chosenProject)
+}
 createProjectsView(projectChunks)
+const createModal = (myProject) => {
+
+// Modal's elements defines
+const  modalContainer = document.createElement('div')
+const modalBackground = document.createElement('div')
+const modalContent = document.createElement('div')
+const btnClose = document.createElement('button')
+const modalWrap = document.createElement('div')
+
+//Gives className and attribute for the element of modal component.
+modalWrap.className="section modal-wrap"
+modalBackground.className="modal-background"
+btnClose.className="modal-close is-large"
+btnClose.setAttribute('aria-label', "close")
+modalContent.className="modal-content"
+modalContainer.className="modal"
+modalContainer.id="page-modal"
+modalContainer.appendChild(modalBackground)
+modalContainer.appendChild(btnClose)
+
+//Card Element Defines
+const modalCard = document.createElement('div')
+const modalImgContainer = document.createElement('div')
+const imgContainer = document.createElement('div')
+
+const btnViewCode = document.createElement('a')
+const btnViewSite = document.createElement('a')
+const cardContent = document.createElement('div')
+const contentTitle = document.createElement('h3')
+const miniContent = document.createElement('div')
+const divider = document.createElement('br')
+
+// Give classNames and attributes for the element of card component.
+modalCard.className="card"
+modalImgContainer.className="card-image"
+imgContainer.className = "image "
+const slider = createCarousel(chosenProject['projectImagesArr'])
+
+modalImgContainer.appendChild(slider)
+modalCard.appendChild(modalImgContainer)
+cardContent.className="card-content"
+contentTitle.className="title is-4"
+miniContent.className="content"
+contentTitle.textContent = myProject['projectTitle']
+miniContent.textContent = myProject['description']
+cardContent.appendChild(contentTitle)
+cardContent.appendChild(miniContent)
+cardContent.appendChild(divider)
+btnViewCode.className = "button is-danger is-outlined"
+btnViewCode.textContent="View Code"
+btnViewCode.setAttribute('href',myProject['github'])
+btnViewCode.setAttribute('target',"_blank")
+btnViewSite.className="button is-link is-outlined"
+btnViewSite.setAttribute('href',myProject['link'])
+btnViewSite.setAttribute('target',"_blank")
+btnViewSite.textContent="View Site"
+cardContent.appendChild(btnViewCode)
+cardContent.appendChild(btnViewSite)
+modalCard.appendChild(cardContent)
+modalWrap.appendChild(modalCard)
+modalContent.appendChild(modalWrap)
+modalContainer.appendChild(modalContent)
+projectsContainer.appendChild(modalContainer)
+
+modalContainer.style.display="block"
+// When We want to close modal component
+btnClose.onclick = function(){
+  modalContainer.style.display="none"
+}
+// When We click  the out of modal component
+window.onclick = function(event) {
+  if(event.target.className == 'modal-background'){
+    modalContainer.style.display="none"
+  }
+}
+
+}
+
+const createCarousel = (sliderImages)=> {
+  const sliderContainer = document.createElement('div')
+  const sliderItems = document.createElement('div')
+  leftArrow = document.createElement('div')
+  rightArrow = document.createElement('div')
+  index = 0
+ 
+  sliderContainer.className="slider"
+  sliderItems.className="slider-items"
+  leftArrow.className="left-slide"
+  rightArrow.className="right-slide"
+  leftArrow.style.cssText="background-image:url(images/left-icon.png);background-repeat:no repeat;background-size:100% 100%;background-position:center center;"
+  rightArrow.style.cssText="background-image:url(images/right-icon.png);background-repeat:no repeat;background-size:100% 100%;background-position:center center;"
+
+  for(let i=0;i<sliderImages.length;i++){
+    const item = document.createElement("div")
+    const img = document.createElement('img')
+    item.className="image item"
+    img.setAttribute('src','images/'+chosenProject["imgFolder"]+'/'+sliderImages[i])
+    item.appendChild(img)
+    sliderItems.appendChild(item)
+  }
+  sliderContainer.appendChild(sliderItems)
+  sliderContainer.appendChild(leftArrow)
+  sliderContainer.appendChild(rightArrow)
+  const slides = sliderItems.children
+
+  rightArrow.onclick = function(){
+    next('next')
+  }
+  leftArrow.onclick = function(){
+    next('prev')
+  }
+  const next = (direction) => {
+    if(direction === "next"){
+      index++
+      if(index ===  sliderImages.length){
+        index=0
+      }
+    }
+    else{
+      if(index == 0){
+        index = sliderImages.length -1
+      }
+      else{
+        index--
+      }
+    }
+    for(let i=0;i<sliderImages.length;i++){
+      slides[i].classList.remove('active')
+    }
+    slides[index].classList.add('active')
+   
+
+  }
+  return sliderContainer
+}
 // Choose any of these as the category of projects
 allLink.addEventListener('click', () => {
   animationBar.style.cssText="width:80px;left:0;"
@@ -198,8 +339,4 @@ otherLink.addEventListener('click', () => {
   projectsContainer.innerHTML=""
   let otherArr = makeNewCategoryArr('other', selectedCategory)
   createProjectsView(otherArr)
-
 })
-
-
-

@@ -176,25 +176,93 @@ justify-content:flex-end;
 div.project-div img{
   -webkit-filter: grayscale(0) blur(0);
 	filter: grayscale(0) blur(0);
-	-webkit-transition: .3s ease-in-out;
-	transition: .3s ease-in-out;
+	-webkit-transition: .1s ease-in-out;
+	transition: .1s ease-in-out;
 }
 div.project-div:hover img{
-  -webkit-filter: grayscale(100%) blur(8px);
-  filter: grayscale(100%) blur(8px);
+  -webkit-filter: grayscale(100%) blur(14px);
+  filter: grayscale(100%) blur(14px);
   cursor: pointer;
 }
 .overlayTop{
   top:0;
   left:0;
- 
   width: 100%;
 }
 div.project-div:hover .overlayTop{
  height: 100% !important;
  opacity: 1 !important;
 }
+.modal-wrap{
+  position: fixed;
+  width: 600px;
+  top:8%;
+}
+.slider{
+  max-width: 600px;
+  margin:10px auto;
+  position: relative;
+}
+.slider .left-slide,.slider .right-slide{
+ position: absolute;
+ height: 40px;
+ width: 40px;
+ border-radius: 50%;
+ background-color: #444444;
+ color:#fff;
+ top: 50%;
+ margin-top: -20px;
+ text-align: center;
+ cursor: pointer;
+ transition: all .5s ease;
+}
+.slider .left-slide{
+left:30px;
+}
+.slider .right-slide{
+  right: 30px;
+}
+.slider .slider-items .item{
+  display: none;
+  position: relative;
+  animation: fadeIn ease 2s;
+  -webkit-animation: fadeIn ease 2s;
+  -moz-animation: fadeIn ease 2s;
+  -o-animation: fadeIn ease 2s;
+  -ms-animation: fadeIn ease 2s;
+}
+.slider .slider-items .item.active{
+  display: block;
+}
+.slider .left-slide:hover,.slider .right-slide:hover{
+  background-color: firebrick;
+  box-shadow: 0px 0px 10px black;
+}
 
+@keyframes fadeIn {
+  0% {opacity:0;}
+  100% {opacity:1;}
+  }
+  
+  @-moz-keyframes fadeIn {
+  0% {opacity:0;}
+  100% {opacity:1;}
+  }
+  
+  @-webkit-keyframes fadeIn {
+  0% {opacity:0;}
+  100% {opacity:1;}
+  }
+  
+  @-o-keyframes fadeIn {
+  0% {opacity:0;}
+  100% {opacity:1;}
+  }
+  
+  @-ms-keyframes fadeIn {
+  0% {opacity:0;}
+  100% {opacity:1;}
+  }
 @media only screen and (max-width: 500px){
   .myname{
   font-size: 25px;

@@ -75,13 +75,13 @@ section#project-section{
   background-color: #EEEEFF;
 }
 .project-title{
-  color: #7C7A7A;
+  color: #363636;
 }
 .project-title span{
-  border-bottom: 4px solid darkslategray;
+  border-bottom: 4px solid #363636;
 }
 .project-title.about span{
-  color: darkslategray;
+  color: #363636;
 }
 .link-projects-container{
  position: relative;
@@ -95,7 +95,7 @@ section#project-section{
   font-size: 15px;
   text-decoration: none;
   text-transform: uppercase;
-  color:darkslategray;
+  color:#363636;
   line-height: 50px;
   position: relative;
   z-index: 1;
@@ -136,17 +136,7 @@ nav .animation{
   height: 320px;
 }
 .question-guy{
-  color:darkslategray !important;
-}
-.project-links{
-  border-top: 4px solid darkslategray;
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: space-around;
-  margin-bottom:0;
-}
-.project-links div.column.github{
-  border-right: 4px solid darkslategray;
+  color:#363636 !important;
 }
 .skill{
   width: 50px;
@@ -155,23 +145,12 @@ nav .animation{
 .myname{
   border-bottom: 4px solid black;
 }
-.github{
-display: flex;
-justify-content:flex-start;
-}
-.website{
-display: flex;
-justify-content:flex-end;
-}
+
 .contact-content{
-  width: 100%;
   display: flex;
-  justify-content: center;
-}
-.contact-link-item{
-  width: 75%;
-  padding-top: 8px;
-  margin-left: 10px;
+  justify-content: space-evenly;
+  flex-direction: row;
+  margin-bottom: 2rem;
 }
 div.project-div img{
   -webkit-filter: grayscale(0) blur(0);
@@ -208,7 +187,6 @@ div.project-div:hover .overlayTop{
  height: 40px;
  width: 40px;
  border-radius: 50%;
- background-color: #444444;
  color:#fff;
  top: 50%;
  margin-top: -20px;
@@ -217,10 +195,12 @@ div.project-div:hover .overlayTop{
  transition: all .5s ease;
 }
 .slider .left-slide{
-left:30px;
+  opacity: 0.3;
+  left:10px;
 }
 .slider .right-slide{
-  right: 30px;
+  opacity: 0.3;
+  right: 10px;
 }
 .slider .slider-items .item{
   display: none;
@@ -237,6 +217,7 @@ left:30px;
 .slider .left-slide:hover,.slider .right-slide:hover{
   background-color: darkslategray;
   box-shadow: 0px 0px 10px black;
+  opacity: 1;
 }
 
 @keyframes fadeIn {
@@ -277,19 +258,6 @@ left:30px;
  .bio p.subtitle{
    font-size: 14px;
  }
- .contact-content{
-   width: 100%;
-   font-size: 11px;
-   display: flex;
-   justify-content: center;
-   color:#7C7A7A;
-
- }
- .contact-link-item{
-   width: 75%;
-   padding-top: 14px;
-   margin-left: 10px;
- }
 
  footer{
    height: 20px;
@@ -321,17 +289,8 @@ left:30px;
    .content{
      font-size: 25px;
    }
-   .contact-content{
-     width: 100%;
-     font-size: 20px;
-     display: flex;
-     justify-content: center;
-   }
-   .contact-link-item{
-     width: 75%;
-     padding-top: 16px;
-     margin-left: 20px;
-   }
+  
+ 
    h1 span{
      font-size: 40px;
    }

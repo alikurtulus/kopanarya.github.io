@@ -126,10 +126,10 @@ const makeNewCategoryArr = (category, arr) =>{
 }
 // We change fontColor of selectedLink
 const changeFontColor= (selectedOne,otherSecond,otherThird,otherFourth) =>{
-  selectedOne.style.cssText="color:firebrick;"
-  otherSecond.style.cssText="color:white;"
-  otherThird.style.cssText="color:white;"
-  otherFourth.style.cssText="color:white;"
+  selectedOne.style.cssText="color:darkslategray;"
+  otherSecond.style.cssText="color:darkslategray;"
+  otherThird.style.cssText="color:darkslategray;"
+  otherFourth.style.cssText="color:darkslategray;"
 }
 
 const createProjectsView = (selectedArr) => {

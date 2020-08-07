@@ -200,7 +200,7 @@ div.project-div:hover .overlayTop{
 }
 .slider{
   max-width: 600px;
-  margin:20px auto;
+  margin:10px auto;
   position: relative;
 }
 .slider .left-slide,.slider .right-slide{
@@ -225,7 +225,11 @@ left:30px;
 .slider .slider-items .item{
   display: none;
   position: relative;
-  animation: zoom 1s ease;
+  animation: fadeIn ease 2s;
+  -webkit-animation: fadeIn ease 2s;
+  -moz-animation: fadeIn ease 2s;
+  -o-animation: fadeIn ease 2s;
+  -ms-animation: fadeIn ease 2s;
 }
 .slider .slider-items .item.active{
   display: block;
@@ -235,12 +239,30 @@ left:30px;
   box-shadow: 0px 0px 10px black;
 }
 
-@keyframes zoom{   
-  0%{transform: scale(2);opacity: 0;}
-  50%{transform: scale(2);}
-  100%{transform: scale(1);opacity: 1;}
-}
-
+@keyframes fadeIn {
+  0% {opacity:0;}
+  100% {opacity:1;}
+  }
+  
+  @-moz-keyframes fadeIn {
+  0% {opacity:0;}
+  100% {opacity:1;}
+  }
+  
+  @-webkit-keyframes fadeIn {
+  0% {opacity:0;}
+  100% {opacity:1;}
+  }
+  
+  @-o-keyframes fadeIn {
+  0% {opacity:0;}
+  100% {opacity:1;}
+  }
+  
+  @-ms-keyframes fadeIn {
+  0% {opacity:0;}
+  100% {opacity:1;}
+  }
 @media only screen and (max-width: 500px){
   .myname{
   font-size: 25px;

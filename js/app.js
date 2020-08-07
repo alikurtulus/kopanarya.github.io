@@ -126,10 +126,10 @@ const makeNewCategoryArr = (category, arr) =>{
 }
 // We change fontColor of selectedLink
 const changeFontColor= (selectedOne,otherSecond,otherThird,otherFourth) =>{
-  selectedOne.style.cssText="color:firebrick;"
-  otherSecond.style.cssText="color:white;"
-  otherThird.style.cssText="color:white;"
-  otherFourth.style.cssText="color:white;"
+  selectedOne.style.cssText="color:darkslategray;"
+  otherSecond.style.cssText="color:darkslategray;"
+  otherThird.style.cssText="color:darkslategray;"
+  otherFourth.style.cssText="color:darkslategray;"
 }
 
 const createProjectsView = (selectedArr) => {
@@ -145,10 +145,10 @@ const createProjectsView = (selectedArr) => {
     textContainer.style.cssText="transition: all .3s ease;color:firebrick; position:absolute;opacity:0;font-weight:800;"
     projectName.className="project-name"
     projectName.textContent=selectedArr[i]['projectTitle']
-    projectName.style.cssText=" font-size:1.6rem; color:firebrick;top:50%;left:50%;transform:translate(-50%,-50%);text-align:center;position:absolute;"
+    projectName.style.cssText=" font-size:1.6rem; color:firebrick;top:50%;left:50%;transform:translate(-40%,-40%);text-align:center;position:absolute;"
     learnMoreLink.className="learn-more-link "
     learnMoreLink.id=selectedArr[i]['projectTitle']
-    learnMoreLink.style.cssText="font-size:1.2rem;color:firebrick;border-radius:8px;border:1px solid firebrick;margin: auto;padding:10px;text-align:center;top:70%;left:50%;transform:translate(-50%,-70%);position:absolute;outline:none;background-color:Transparent;cursor:pointer;"
+    learnMoreLink.style.cssText="font-size:1.2rem;color:firebrick;border-radius:8px;border:1px solid firebrick;padding:10px;text-align:center;top:70%;left:50%;transform:translate(-40%,-20%);position:absolute;outline:none;background-color:Transparent;cursor:pointer;"
     learnMoreLink.textContent="Learn more"
     mainDiv.className="column is-full-mobile is-one-third-desktop project-div"
     mainDiv.style.cssText="width:350px;height:370px;margin:1rem 1rem;display:inline-block;position:relative;"
@@ -312,6 +312,7 @@ cardContent.appendChild(divider)
 btnViewCode.className = "button is-danger is-outlined"
 btnViewCode.textContent="View Code"
 btnViewCode.setAttribute('href',myProject['github'])
+btnViewCode.style.cssText="margin:auto 1rem auto 7.2rem;"
 btnViewCode.setAttribute('target',"_blank")
 btnViewSite.className="button is-link is-outlined"
 btnViewSite.setAttribute('href',myProject['link'])

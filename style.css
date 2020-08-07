@@ -187,12 +187,58 @@ div.project-div:hover img{
 .overlayTop{
   top:0;
   left:0;
- 
   width: 100%;
 }
 div.project-div:hover .overlayTop{
  height: 100% !important;
  opacity: 1 !important;
+}
+.modal-wrap{
+  position: fixed;
+  width: 600px;
+  top:8%;
+}
+.slider{
+  max-width: 600px;
+  margin:20px auto;
+  position: relative;
+}
+.slider .left-slide,.slider .right-slide{
+ position: absolute;
+ height: 40px;
+ width: 40px;
+ border-radius: 50%;
+ background-color: #444444;
+ color:#fff;
+ top: 50%;
+ margin-top: -20px;
+ text-align: center;
+ cursor: pointer;
+ transition: all .5s ease;
+}
+.slider .left-slide{
+left:30px;
+}
+.slider .right-slide{
+  right: 30px;
+}
+.slider .slider-items .item{
+  display: none;
+  position: relative;
+  animation: zoom 1s ease;
+}
+.slider .slider-items .item.active{
+  display: block;
+}
+.slider .left-slide:hover,.slider .right-slide:hover{
+  background-color: firebrick;
+  box-shadow: 0px 0px 10px black;
+}
+
+@keyframes zoom{   
+  0%{transform: scale(2);opacity: 0;}
+  50%{transform: scale(2);}
+  100%{transform: scale(1);opacity: 1;}
 }
 
 @media only screen and (max-width: 500px){

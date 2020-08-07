@@ -211,7 +211,7 @@ modalCard.className="card"
 modalImgContainer.className="card-image"
 imgContainer.className = "image "
 const slider = createCarousel(chosenProject['projectImagesArr'])
-
+console.log(slider)
 modalImgContainer.appendChild(slider)
 modalCard.appendChild(modalImgContainer)
 cardContent.className="card-content"
@@ -240,18 +240,16 @@ projectsContainer.appendChild(modalContainer)
 
 modalContainer.style.display="block"
 // When We want to close modal component
-btnClose.onclick = function(){
-  modalContainer.style.display="none"
-}
-// When We click  the out of modal component
-window.onclick = function(event) {
-  if(event.target.className == 'modal-background'){
-    modalContainer.style.display="none"
+   btnClose.onclick = function(){
+      modalContainer.style.display="none"
   }
+// When We click  the out of modal component
+  window.onclick = function(event) {
+    if(event.target.className == 'modal-background'){
+      modalContainer.style.display="none"
+    }
+ }
 }
-
-}
-
 const createCarousel = (sliderImages)=> {
   const sliderContainer = document.createElement('div')
   const sliderItems = document.createElement('div')
@@ -271,6 +269,7 @@ const createCarousel = (sliderImages)=> {
     const img = document.createElement('img')
     item.className="image item"
     img.setAttribute('src','images/'+chosenProject["imgFolder"]+'/'+sliderImages[i])
+    img.style.cssText="width:600px;height:320px;"
     item.appendChild(img)
     sliderItems.appendChild(item)
   }

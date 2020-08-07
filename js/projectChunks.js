@@ -5,8 +5,9 @@
       imgUrl:"images/pacman/pacman-screen.png",
       projectTitle:"Pacman",
       imgFolder:"pacman",
-      projectImagesArr:["pacman-screen.png","pacman2.PNG","pacman3.PNG"],
-      description:"To this day, Pac-Man remains one of the most popular video games in history.I recreated Pacman using Vanilla JavaScript for the movement of the characters. I used HTML5 and CSS3 to build and design the game."
+      projectImagesArr:["pacman-screen.png","pacman2.png","pacman3.png"],
+      description:"I recreated Pacman using Vanilla JavaScript for the movement of the characters. I used HTML5 and CSS3 to build and design the game.",
+      usedTecnologies:["js-icon.png","css3-icon.png","html-5.png","github-icon.png"]
     },
     { link:"https://alikurtulush.dev/Project-2",
       github:"https://github.com/kopanarya/Project-2",
@@ -15,7 +16,8 @@
       projectTitle:"DailyApp",
       imgFolder:"londondaily",
       projectImagesArr:["londondaily-screen.png","londondaily2.png","londondaily3.png"],
-      description:"Our project was about London daily news. With this project, we tried to keepLondoners informed on various topics: tube status,weather, bike points, airquality. We used React.js for our font end development. In this Project, I tried to find the right API and integrated our front end project."
+      description:"Our project was about London daily news. With this project, we tried to keep Londoners informed on various topics: tube status,weather, bike points, airquality.",
+      usedTecnologies:["js-icon.png","css3-icon.png","html-5.png","github-icon.png","react-icon.png","api-icon.png","webpack-icon.png","yarnpkg-icon.png"]
     },
     { link:"https://gaeventup.herokuapp.com/#/",
       github:"https://github.com/kopanarya/eventsUp",
@@ -24,7 +26,8 @@
       projectTitle:"EventUp",
       imgFolder:"eventup",
       projectImagesArr:["eventup-screen.png","eventup2.png","eventup3.png","eventup4.png"],
-      description:"We created a full-stack music application. Features include searching for a venue or gig, adding a new event or providing comments on their experience. We used React.js and Express.js for front-end and back-end. Our database system was MongoDB."
+      description:"We created a full-stack music application. Features include searching for a venue or gig, adding a new event or providing comments on their experience. We used React.js and Express.js for front-end and back-end. Our database system was MongoDB.",
+      usedTecnologies:["js-icon.png","css3-icon.png","html-5.png","github-icon.png","api-icon.png","mongodb.icon.png","nodejs-icon.png","npm-icon.png","sass-icon.png","react-icon.png"]
     },
     { link:"https://travelonar.herokuapp.com/#/",
       github:"https://github.com/kopanarya/Travelonar",
@@ -33,5 +36,7 @@
       projectTitle:"Travelonar",
       imgFolder:"travelonar",
       projectImagesArr:["travelonar-screen.png","travelonar2.png","travelonar3.png","travelonar4.png","travelonar5.png","travelonar6.png","travelonar7.png"],
-      description:"My project was a city guide for the traveller. User can type a city name and get pieces of information about news, restaurants, events, landmarks, stories, nightlifeI used 5 different APIs to get data. Data and the back end are built with Python and Flask; I used React.js for front-end side. My project's database system was PostgreSQL."
+      description:"My project was a city guide for the traveller. User can type a city name and get pieces of information about news, restaurants, events, landmarks, stories, nightlife.",
+      usedTecnologies:["js-icon.png","css3-icon.png","html-5.png","github-icon.png","python-icon.png","react-icon.png","postgresql-icon.png","api-icon.png"]
     }]
+    const skillsIcon = ["api-icon.png","bootstrap-logo.png","css3-icon.png","github-icon.png","html-5.png","sass-icon.png","npm-icon.png","js-icon.png","npm-icon.png","python-icon.png","react-icon.png","webpack-icon.png","yarnpkg-icon.png","nodejs-icon.png","mongodb-icon.png","vue.js.png","postgresql-icon.png","aws-icon.png","jira-icon.png","django-icon.png"]

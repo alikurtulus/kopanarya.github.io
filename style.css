@@ -200,7 +200,7 @@ div.project-div:hover .overlayTop{
 }
 .slider{
   max-width: 600px;
-  margin:10px auto;
+  margin: auto;
   position: relative;
 }
 .slider .left-slide,.slider .right-slide{

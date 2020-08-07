@@ -1,5 +1,5 @@
  console.log('Connected')
- let scene, camera, renderer, startGeo, stars, selectedIcon,urlIcon, learnMoreLink,chosenProject,leftArrow,rightArrow
+ let scene, camera, renderer, startGeo, stars, selectedIcon,urlIcon, learnMoreLink,chosenProject,leftArrow,rightArrow, slides,slider,usedTechnologies 
  const typeWriter = document.getElementById('type-writer')
  const dataText = typeWriter.getAttribute('data-text')
  const mainNavLinks = document.querySelectorAll('nav div.buttons a')
@@ -19,7 +19,7 @@
 
 let count = 0
 const dataTextLength = dataText.length
-const skillsIcon = ["api-icon.png","bootstrap-logo.png","css3-icon.png","github-icon.png","html-5.png","sass-icon.png","npm-icon.png","js-icon.png","npm-icon.png","python-icon.png","react-icon.png","webpack-icon.png","yarnpkg-icon.png","nodejs-icon.png","mongodb-icon.png"]
+
 const init = () => {
 scene = new THREE.Scene();
 camera = new THREE.PerspectiveCamera(60,window.innerWidth/window.innerHeight,1,1000)
@@ -171,85 +171,30 @@ const selectedProject = (id) => {
       chosenProject = projectChunks[i]
     }
   }
+  slider = createCarousel(chosenProject['projectImagesArr'])
+  usedTechnologies = createUsedTech(chosenProject['usedTecnologies'])
   createModal(chosenProject)
+ 
 }
 createProjectsView(projectChunks)
-const createModal = (myProject) => {
+const createUsedTech = (usedTechArr) => {
+  const usedTechContainer = document.createElement('div')
+  usedTechContainer.className="columns "
 
-// Modal's elements defines
-const  modalContainer = document.createElement('div')
-const modalBackground = document.createElement('div')
-const modalContent = document.createElement('div')
-const btnClose = document.createElement('button')
-const modalWrap = document.createElement('div')
+  for(let i = 0; i<usedTechArr.length;i++){
+    const techItem = document.createElement('div')
+    const usedTechItemImg = document.createElement('img')
+    usedTechItemImg.setAttribute('src','images/skills/'+usedTechArr[i])
+    techItem.className="column is-1"
+    techItem.appendChild(usedTechItemImg)
+    usedTechContainer.appendChild(techItem)
 
-//Gives className and attribute for the element of modal component.
-modalWrap.className="section modal-wrap"
-modalBackground.className="modal-background"
-btnClose.className="modal-close is-large"
-btnClose.setAttribute('aria-label', "close")
-modalContent.className="modal-content"
-modalContainer.className="modal"
-modalContainer.id="page-modal"
-modalContainer.appendChild(modalBackground)
-modalContainer.appendChild(btnClose)
-
-//Card Element Defines
-const modalCard = document.createElement('div')
-const modalImgContainer = document.createElement('div')
-const imgContainer = document.createElement('div')
-
-const btnViewCode = document.createElement('a')
-const btnViewSite = document.createElement('a')
-const cardContent = document.createElement('div')
-const contentTitle = document.createElement('h3')
-const miniContent = document.createElement('div')
-const divider = document.createElement('br')
-
-// Give classNames and attributes for the element of card component.
-modalCard.className="card"
-modalImgContainer.className="card-image"
-imgContainer.className = "image "
-const slider = createCarousel(chosenProject['projectImagesArr'])
-console.log(slider)
-modalImgContainer.appendChild(slider)
-modalCard.appendChild(modalImgContainer)
-cardContent.className="card-content"
-contentTitle.className="title is-4"
-miniContent.className="content"
-contentTitle.textContent = myProject['projectTitle']
-miniContent.textContent = myProject['description']
-cardContent.appendChild(contentTitle)
-cardContent.appendChild(miniContent)
-cardContent.appendChild(divider)
-btnViewCode.className = "button is-danger is-outlined"
-btnViewCode.textContent="View Code"
-btnViewCode.setAttribute('href',myProject['github'])
-btnViewCode.setAttribute('target',"_blank")
-btnViewSite.className="button is-link is-outlined"
-btnViewSite.setAttribute('href',myProject['link'])
-btnViewSite.setAttribute('target',"_blank")
-btnViewSite.textContent="View Site"
-cardContent.appendChild(btnViewCode)
-cardContent.appendChild(btnViewSite)
-modalCard.appendChild(cardContent)
-modalWrap.appendChild(modalCard)
-modalContent.appendChild(modalWrap)
-modalContainer.appendChild(modalContent)
-projectsContainer.appendChild(modalContainer)
-
-modalContainer.style.display="block"
-// When We want to close modal component
-   btnClose.onclick = function(){
-      modalContainer.style.display="none"
   }
-// When We click  the out of modal component
-  window.onclick = function(event) {
-    if(event.target.className == 'modal-background'){
-      modalContainer.style.display="none"
-    }
- }
+  return usedTechContainer
+ 
+  
 }
+
 const createCarousel = (sliderImages)=> {
   const sliderContainer = document.createElement('div')
   const sliderItems = document.createElement('div')
@@ -276,8 +221,8 @@ const createCarousel = (sliderImages)=> {
   sliderContainer.appendChild(sliderItems)
   sliderContainer.appendChild(leftArrow)
   sliderContainer.appendChild(rightArrow)
-  const slides = sliderItems.children
-
+  slides = sliderItems.children
+  slides[0].classList.add('active')
   rightArrow.onclick = function(){
     next('next')
   }
@@ -307,6 +252,90 @@ const createCarousel = (sliderImages)=> {
 
   }
   return sliderContainer
+}
+
+
+const createModal = (myProject) => {
+
+// Modal's elements defines
+const  modalContainer = document.createElement('div')
+const modalBackground = document.createElement('div')
+const modalContent = document.createElement('div')
+const btnClose = document.createElement('button')
+const modalWrap = document.createElement('div')
+
+
+
+
+//Gives className and attribute for the element of modal component.
+modalWrap.className="section modal-wrap"
+modalBackground.className="modal-background"
+btnClose.className="modal-close is-large"
+btnClose.setAttribute('aria-label', "close")
+modalContent.className="modal-content"
+modalContainer.className="modal"
+modalContainer.id="page-modal"
+modalContainer.appendChild(modalBackground)
+modalContainer.appendChild(btnClose)
+
+//Card Element Defines
+const modalCard = document.createElement('div')
+const modalImgContainer = document.createElement('div')
+const imgContainer = document.createElement('div')
+
+const btnViewCode = document.createElement('a')
+const btnViewSite = document.createElement('a')
+const cardContent = document.createElement('div')
+const contentTitle = document.createElement('h3')
+const miniContent = document.createElement('div')
+const divider = document.createElement('br')
+const techTitle = document.createElement('h4')
+
+// Give classNames and attributes for the element of card component.
+modalCard.className="card"
+modalImgContainer.className="card-image"
+modalImgContainer.style.cssText="border:none;"
+modalImgContainer.appendChild(slider)
+modalCard.appendChild(modalImgContainer)
+cardContent.className="card-content"
+contentTitle.className="title is-4"
+techTitle.className="title is-6"
+techTitle.textContent="Used Technologies"
+miniContent.className="content"
+contentTitle.textContent = myProject['projectTitle']
+miniContent.textContent = myProject['description']
+cardContent.appendChild(contentTitle)
+cardContent.appendChild(miniContent)
+cardContent.appendChild(techTitle)
+cardContent.appendChild(usedTechnologies)
+cardContent.appendChild(divider)
+btnViewCode.className = "button is-danger is-outlined"
+btnViewCode.textContent="View Code"
+btnViewCode.setAttribute('href',myProject['github'])
+btnViewCode.setAttribute('target',"_blank")
+btnViewSite.className="button is-link is-outlined"
+btnViewSite.setAttribute('href',myProject['link'])
+btnViewSite.setAttribute('target',"_blank")
+btnViewSite.textContent="View Site"
+cardContent.appendChild(btnViewCode)
+cardContent.appendChild(btnViewSite)
+modalCard.appendChild(cardContent)
+modalWrap.appendChild(modalCard)
+modalContent.appendChild(modalWrap)
+modalContainer.appendChild(modalContent)
+projectsContainer.appendChild(modalContainer)
+
+modalContainer.style.display="block"
+// When We want to close modal component
+   btnClose.onclick = function(){
+      modalContainer.style.display="none"
+  }
+// When We click  the out of modal component
+  window.onclick = function(event) {
+    if(event.target.className == 'modal-background'){
+      modalContainer.style.display="none"
+    }
+ }
 }
 // Choose any of these as the category of projects
 allLink.addEventListener('click', () => {

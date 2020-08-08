@@ -103,7 +103,6 @@ window.addEventListener('scroll', function () {
   const fromTop = window.scrollY
   mainNavLinks.forEach(link => {
     const section = document.querySelector(link.hash)
-    console.log(section)
     if (section.offsetTop <= fromTop && section.offsetTop + section.offsetHeight > fromTop) {
       link.classList.add('current')
     } else {
@@ -264,9 +263,6 @@ const modalBackground = document.createElement('div')
 const modalContent = document.createElement('div')
 const btnClose = document.createElement('button')
 const modalWrap = document.createElement('div')
-
-
-
 
 //Gives className and attribute for the element of modal component.
 modalWrap.className="section modal-wrap"

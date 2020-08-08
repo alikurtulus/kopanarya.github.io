@@ -5,7 +5,7 @@
       imgUrl:"images/pacman/pacman-screen.png",
       projectTitle:"Pacman",
       imgFolder:"pacman",
-      projectImagesArr:["pacman-screen.png","pacman2.png","pacman3.png"],
+      projectImagesArr:["pacman-screen.png","pacman-second.png","pacman-third.png"],
       description:"I recreated Pacman using Vanilla JavaScript for the movement of the characters. I used HTML5 and CSS3 to build and design the game.",
       usedTecnologies:["js-icon.png","css3-icon.png","html-5.png","github-icon.png"]
     },
@@ -15,7 +15,7 @@
       imgUrl:"images/londondaily/londondaily-screen.png",
       projectTitle:"DailyApp",
       imgFolder:"londondaily",
-      projectImagesArr:["londondaily-screen.png","londondaily2.png","londondaily3.png"],
+      projectImagesArr:["londondaily-screen.png","londondaily-second.png","londondaily-third.png"],
       description:"Our project was about London daily news. With this project, we tried to keep Londoners informed on various topics: tube status,weather, bike points, airquality.",
       usedTecnologies:["js-icon.png","css3-icon.png","html-5.png","github-icon.png","react-icon.png","api-icon.png","webpack-icon.png","yarnpkg-icon.png"]
     },
@@ -25,7 +25,7 @@
       imgUrl:"images/eventup/eventup-screen.png",
       projectTitle:"EventUp",
       imgFolder:"eventup",
-      projectImagesArr:["eventup-screen.png","eventup2.png","eventup3.png","eventup4.png"],
+      projectImagesArr:["eventup-screen.png","eventup-second.png","eventup-third.png","eventup-fourth.png"],
       description:"We created a full-stack music application. Features include searching for a venue or gig, adding a new event or providing comments on their experience. We used React.js and Express.js for front-end and back-end. Our database system was MongoDB.",
       usedTecnologies:["js-icon.png","css3-icon.png","html-5.png","github-icon.png","api-icon.png","mongodb-icon.png","nodejs-icon.png","npm-icon.png","sass-icon.png","react-icon.png"]
     },
@@ -35,7 +35,7 @@
       imgUrl:"images/travelonar/travelonar-screen.png",
       projectTitle:"Travelonar",
       imgFolder:"travelonar",
-      projectImagesArr:["travelonar-screen.png","travelonar2.png","travelonar3.png","travelonar4.png","travelonar5.png","travelonar6.png","travelonar7.png"],
+      projectImagesArr:["travelonar-screen.png","travelonar-second.png","travelonar-third.png","travelonar-fourth.png","travelonar-fifth.png","travelonar-sixth.png","travelonar-seventh.png"],
       description:"My project was a city guide for the traveller. User can type a city name and get pieces of information about news, restaurants, events, landmarks, stories, nightlife.",
       usedTecnologies:["js-icon.png","css3-icon.png","html-5.png","github-icon.png","python-icon.png","react-icon.png","postgresql-icon.png","api-icon.png"]
     }]

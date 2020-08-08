@@ -191,8 +191,7 @@ const createUsedTech = (usedTechArr) => {
 
   }
   return usedTechContainer
- 
-  
+
 }
 
 const createCarousel = (sliderImages)=> {
@@ -253,10 +252,7 @@ const createCarousel = (sliderImages)=> {
   }
   return sliderContainer
 }
-
-
 const createModal = (myProject) => {
-
 // Modal's elements defines
 const  modalContainer = document.createElement('div')
 const modalBackground = document.createElement('div')

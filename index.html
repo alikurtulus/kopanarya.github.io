@@ -5,6 +5,7 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
     <title>Ali Kurtulush Personal Web Site</title>
   </head>
@@ -37,7 +38,7 @@
     </div>
   </nav>
   </header>
-  <main>
+  <main >
     <section class="hero">
        <div class="hero-body">
          <div class="container hero-container">
@@ -50,18 +51,18 @@
           </div>
        </div>
     </section>
-    <section class="section" id="about-section">
+    <section class="section" data-aos="fade-up"  id="about-section">
       <div class="container">
         <h1 class="title is-2 has-text-centered project-title about"><span>About</span> </h1>
         <br>
         <div class="columns is-multiline is-mobile">
-         <div class="column is-full-mobile is-half-desktop">
+         <div class="column is-full-mobile is-half-desktop" data-aos="fade-left">
             <h2 class="title is-3 project-title about"><span>Tech Skills</span></h2>
               <br>
-            <div class="columns is-multiline  is-mobile skills-container">
-           </div>
+            <div class="columns is-multiline  is-mobile skills-container" >
+            </div>
          </div>
-         <div class="column is-full-mobile is-half-desktop bio">
+         <div class="column is-full-mobile is-half-desktop bio" data-aos="fade-right">
             <h2 class="title is-3 project-title about"><span>Bio</span></h2>
             <br>
               <div class="column is-full-mobile  ">
@@ -79,7 +80,7 @@
         </div>
       </div>
     </section>
-    <section class="section " id="project-section">
+    <section class="section "  data-aos="fade-up" id="project-section">
       <div class="container">
         <h1 class="title is-2  has-text-centered project-title"><span>Projects</span> </h1>
         <br>
@@ -109,8 +110,10 @@
     </div>
   </footer>
     <script src="https://threejs.org/build/three.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="./js/projectChunks.js"></script>
+   
     <script src='./js/app.js'></script>
   </body>
   

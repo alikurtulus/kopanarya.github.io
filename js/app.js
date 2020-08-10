@@ -145,18 +145,17 @@ const createProjectsView = (selectedArr) => {
     let projectImg = document.createElement('img')
     learnMoreLink = document.createElement('button')
     let projectName = document.createElement('p')
-
     textContainer.className='text-container-project overlayTop'
-    textContainer.style.cssText="transition: all .3s ease;color:firebrick; position:absolute;opacity:0;font-weight:800;"
+    textContainer.style.cssText="transition: all .4s ease;color:firebrick; position:absolute;opacity:0;font-weight:800;"
     projectName.className="project-name"
     projectName.textContent=selectedArr[i]['projectTitle']
-    projectName.style.cssText=" font-size:1.6rem; color:firebrick;top:50%;left:50%;transform:translate(-40%,-40%);text-align:center;position:absolute;"
+    projectName.style.cssText=" font-size:1.4rem; color:firebrick;text-align:center;"
     learnMoreLink.className="learn-more-link "
     learnMoreLink.id=selectedArr[i]['projectTitle']
-    learnMoreLink.style.cssText="font-size:1.2rem;color:firebrick;border-radius:8px;border:1px solid firebrick;padding:10px;text-align:center;top:70%;left:50%;transform:translate(-40%,-20%);position:absolute;outline:none;background-color:Transparent;cursor:pointer;"
+    learnMoreLink.style.cssText="font-size:1.2rem;color:firebrick;border-radius:8px;border:1px solid firebrick;padding:10px;text-align:center;margin-top:10px;outline:none;background-color:Transparent;cursor:pointer;"
     learnMoreLink.textContent="Learn more"
     mainDiv.className="column is-full-mobile is-one-third-desktop project-div"
-    mainDiv.style.cssText="width:350px;height:370px;margin:1rem 1rem;display:inline-block;position:relative;"
+    mainDiv.style.cssText="width:350px;height:380px;margin:1rem 1rem;display:inline-block;position:relative;"
     projectImg.setAttribute('src',selectedArr[i]['imgUrl'])
     projectImg.className="project-img"
     projectImg.style.cssText="width:380px;height:370px;display:block; "
@@ -167,7 +166,8 @@ const createProjectsView = (selectedArr) => {
     textContainer.appendChild(learnMoreLink)
     mainDiv.appendChild(projectImg)
     mainDiv.appendChild(textContainer)
-    projectsContainer.appendChild(mainDiv) 
+    projectsContainer.appendChild(mainDiv)
+    projectsContainer.setAttribute('data-aos', 'zoom-in')
   }
 }
 const selectedProject = (id) => {
@@ -179,13 +179,11 @@ const selectedProject = (id) => {
   slider = createCarousel(chosenProject['projectImagesArr'])
   usedTechnologies = createUsedTech(chosenProject['usedTecnologies'])
   createModal(chosenProject)
- 
 }
 createProjectsView(projectChunks)
 const createUsedTech = (usedTechArr) => {
   const usedTechContainer = document.createElement('div')
   usedTechContainer.className="columns "
-
   for(let i = 0; i<usedTechArr.length;i++){
     const techItem = document.createElement('div')
     const usedTechItemImg = document.createElement('img')
@@ -193,19 +191,15 @@ const createUsedTech = (usedTechArr) => {
     techItem.className="column is-1"
     techItem.appendChild(usedTechItemImg)
     usedTechContainer.appendChild(techItem)
-
   }
   return usedTechContainer
-
 }
-
 const createCarousel = (sliderImages)=> {
   const sliderContainer = document.createElement('div')
   const sliderItems = document.createElement('div')
   leftArrow = document.createElement('div')
   rightArrow = document.createElement('div')
   index = 0
- 
   sliderContainer.className="slider"
   sliderItems.className="slider-items"
   leftArrow.className="left-slide"
@@ -252,14 +246,12 @@ const createCarousel = (sliderImages)=> {
       slides[i].classList.remove('active')
     }
     slides[index].classList.add('active')
-   
-
   }
   return sliderContainer
 }
 const createModal = (myProject) => {
 // Modal's elements defines
-const  modalContainer = document.createElement('div')
+const modalContainer = document.createElement('div')
 const modalBackground = document.createElement('div')
 const modalContent = document.createElement('div')
 const btnClose = document.createElement('button')

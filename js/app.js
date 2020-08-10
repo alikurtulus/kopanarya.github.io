@@ -146,7 +146,7 @@ const createProjectsView = (selectedArr) => {
     learnMoreLink = document.createElement('button')
     let projectName = document.createElement('p')
     textContainer.className='text-container-project overlayTop'
-    textContainer.style.cssText="transition: all .4s ease;color:firebrick; position:absolute;opacity:0;font-weight:800;"
+    textContainer.style.cssText="transition: all .2s ease;color:firebrick; position:absolute;opacity:0;font-weight:800;"
     projectName.className="project-name"
     projectName.textContent=selectedArr[i]['projectTitle']
     projectName.style.cssText=" font-size:1.4rem; color:firebrick;text-align:center;"
@@ -167,7 +167,7 @@ const createProjectsView = (selectedArr) => {
     mainDiv.appendChild(projectImg)
     mainDiv.appendChild(textContainer)
     projectsContainer.appendChild(mainDiv)
-    projectsContainer.setAttribute('data-aos', 'zoom-in')
+    
   }
 }
 const selectedProject = (id) => {

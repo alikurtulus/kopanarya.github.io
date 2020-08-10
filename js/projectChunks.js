@@ -26,7 +26,7 @@
       projectTitle:"EventUp",
       imgFolder:"eventup",
       projectImagesArr:["eventup-screen.png","eventup-second.png","eventup-third.png","eventup-fourth.png"],
-      description:"We created a full-stack music application. Features include searching for a venue or gig, adding a new event or providing comments on their experience. We used React.js and Express.js for front-end and back-end. Our database system was MongoDB.",
+      description:"We created a full-stack music application. Features include searching for a venue or gig, adding a new event or providing comments on their experience. ",
       usedTecnologies:["js-icon.png","css3-icon.png","html-5.png","github-icon.png","api-icon.png","mongodb-icon.png","nodejs-icon.png","npm-icon.png","sass-icon.png","react-icon.png"]
     },
     { link:"https://travelonar.herokuapp.com/#/",

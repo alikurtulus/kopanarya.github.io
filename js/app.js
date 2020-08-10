@@ -290,7 +290,7 @@ modalImgContainer.style.cssText="border:none;"
 modalImgContainer.appendChild(slider)
 modalCard.appendChild(modalImgContainer)
 cardContent.className="card-content"
-contentTitle.className="title is-4"
+contentTitle.className="title is-4 project-name"
 techTitle.className="title is-6"
 techTitle.textContent="Used Technologies"
 miniContent.className="content modal-content-container"

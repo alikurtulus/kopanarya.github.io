@@ -517,30 +517,40 @@ and (orientation: landscape) {
   .footer-content{
     margin: 1rem;
     padding-left: 23px;
-   
   }
-
 }
+
 @media only screen 
   and (min-device-width: 375px) 
   and (max-device-width: 667px) 
   and (-webkit-min-device-pixel-ratio: 2) { 
     .modal{
-      top: 0;
+     height: 100% !important;
     }
     .modal-wrap{
-      margin: auto;
-      top: 0;
-      width: 350px;
-      height: 520px;
+      width: 330px;
+      height: 100% !important;
     }
     .modal-content-container{
       width: 100%;
       text-align: left;
+      font-size: 0.9rem;
     }
-    .project-used-icon img{
-      width: 20px;
-      height: 20px;
+    .project-used-icon {
+      width: 25px;
+      height: 25px;
+    }
+    .project-name{
+      font-size: 1rem;
+      margin: 0 !important;
+    }
+    .btn-container{
+      margin-top: 0 !important;
+      margin-bottom: 1rem;
+    }
+    .footer-content{
+      margin: 1rem;
+      padding-left: 0;
     }
 
 }
@@ -569,6 +579,23 @@ and (orientation: landscape) {
   and (min-device-width: 414px) 
   and (max-device-width: 736px) 
   and (-webkit-min-device-pixel-ratio: 3) { 
+    .modal{
+      top: 0;
+    }
+    .modal-wrap{
+      margin: auto;
+      top: 0;
+      width: 350px;
+     
+    }
+    .modal-content-container{
+      width: 100%;
+      text-align: left;
+    }
+    .project-used-icon img{
+      width: 20px;
+      height: 20px;
+    }
 
 }
 

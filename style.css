@@ -146,7 +146,6 @@ nav .animation{
 .myname{
   border-bottom: 4px solid black;
 }
-
 .contact-content{
   display: flex;
   justify-content: space-evenly;
@@ -157,7 +156,7 @@ div.project-div img{
   -webkit-filter: grayscale(0) blur(0);
 	filter: grayscale(0) blur(0);
 	-webkit-transition: .1s ease-in-out;
-	transition: .1s ease-in-out;
+	transition: .2s ease-in-out;
 }
 div.project-div:hover img{
   -webkit-filter: grayscale(100%) blur(14px);
@@ -165,9 +164,14 @@ div.project-div:hover img{
   cursor: pointer;
 }
 .overlayTop{
-  top:0;
-  left:0;
+  top:0%;
+  left:0%;
   width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
 }
 div.project-div:hover .overlayTop{
  height: 100% !important;

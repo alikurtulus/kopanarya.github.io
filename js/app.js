@@ -183,12 +183,13 @@ const selectedProject = (id) => {
 createProjectsView(projectChunks)
 const createUsedTech = (usedTechArr) => {
   const usedTechContainer = document.createElement('div')
-  usedTechContainer.className="columns "
+  usedTechContainer.className="columns is-mobile "
   for(let i = 0; i<usedTechArr.length;i++){
     const techItem = document.createElement('div')
     const usedTechItemImg = document.createElement('img')
     usedTechItemImg.setAttribute('src','images/skills/'+usedTechArr[i])
-    techItem.className="column is-1"
+    techItem.className="column  project-used-icon   "
+
     techItem.appendChild(usedTechItemImg)
     usedTechContainer.appendChild(techItem)
   }
@@ -276,6 +277,7 @@ const imgContainer = document.createElement('div')
 const btnViewCode = document.createElement('a')
 const btnViewSite = document.createElement('a')
 const cardContent = document.createElement('div')
+const buttonsContainer= document.createElement('div')
 const contentTitle = document.createElement('h3')
 const miniContent = document.createElement('div')
 const divider = document.createElement('br')
@@ -291,7 +293,7 @@ cardContent.className="card-content"
 contentTitle.className="title is-4"
 techTitle.className="title is-6"
 techTitle.textContent="Used Technologies"
-miniContent.className="content"
+miniContent.className="content modal-content-container"
 contentTitle.textContent = myProject['projectTitle']
 miniContent.textContent = myProject['description']
 cardContent.appendChild(contentTitle)
@@ -299,17 +301,19 @@ cardContent.appendChild(miniContent)
 cardContent.appendChild(techTitle)
 cardContent.appendChild(usedTechnologies)
 cardContent.appendChild(divider)
-btnViewCode.className = "button is-danger is-outlined"
+btnViewCode.className = "button is-danger is-outlined btn-view-code"
 btnViewCode.textContent="View Code"
 btnViewCode.setAttribute('href',myProject['github'])
-btnViewCode.style.cssText="margin:auto 1rem auto 7.2rem;"
+btnViewCode.style.cssText="margin-left:20px; !important"
 btnViewCode.setAttribute('target',"_blank")
-btnViewSite.className="button is-link is-outlined"
+btnViewSite.className="button is-link is-outlined btn-view-site"
 btnViewSite.setAttribute('href',myProject['link'])
 btnViewSite.setAttribute('target',"_blank")
 btnViewSite.textContent="View Site"
-cardContent.appendChild(btnViewCode)
-cardContent.appendChild(btnViewSite)
+buttonsContainer.className="btn-container"
+buttonsContainer.appendChild(btnViewCode)
+buttonsContainer.appendChild(btnViewSite)
+cardContent.appendChild(buttonsContainer)
 modalCard.appendChild(cardContent)
 modalWrap.appendChild(modalCard)
 modalContent.appendChild(modalWrap)

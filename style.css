@@ -146,12 +146,7 @@ nav .animation{
 .myname{
   border-bottom: 4px solid black;
 }
-.contact-content{
-  display: flex;
-  justify-content: space-evenly;
-  flex-direction: row;
-  margin-bottom: 2rem;
-}
+
 div.project-div img{
   -webkit-filter: grayscale(0) blur(0);
 	filter: grayscale(0) blur(0);
@@ -224,7 +219,26 @@ div.project-div:hover .overlayTop{
   box-shadow: 0px 0px 10px black;
   opacity: 1;
 }
-
+.icon-contact{
+  width: 40px;
+  height: 40px;
+  margin: 1rem 1rem auto auto;
+}
+.footer-content{
+  padding-left:3rem;
+}
+.btn-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.btn-view-code{
+  margin-right: 10px ;
+}
+.project-used-icon {
+  width: 25px;
+  height: 25px;
+}
 @keyframes fadeIn {
   0% {opacity:0;}
   100% {opacity:1;}
@@ -249,6 +263,126 @@ div.project-div:hover .overlayTop{
   0% {opacity:0;}
   100% {opacity:1;}
   }
+  /* Portrait and Landscape */
+@media only screen 
+
+and (max-device-width: 320px)
+and (-webkit-min-device-pixel-ratio: 2) {
+  .modal{
+    top: 0;
+  }
+  .modal-wrap{
+    margin: auto;
+    top: 0;
+    width: 280px;
+    height: 500px;
+  }
+  .modal-content-container{
+    width: 100%;
+    text-align: left;
+  }
+  .project-used-icon {
+    width: 20px !important ;
+    height: 20px !important;
+  }
+ 
+
+}
+
+/* Portrait */
+@media only screen 
+and (max-device-width: 320px)
+and (-webkit-min-device-pixel-ratio: 2)
+and (orientation: portrait) {
+  .modal{
+    top: 0;
+    margin: auto;
+  }
+  .modal-wrap{
+    margin: auto;
+    top: 0;
+    width: 280px;
+    height: 500px;
+  }
+  .modal-content-container{
+    width: 100%;
+  
+    text-align: left;
+  }
+  .project-used-icon img{
+    width: 25px;
+    height: 25px;
+  }
+  
+}
+
+/* Landscape */
+@media only screen 
+and (min-device-width: 320px) 
+and (max-device-width: 480px)
+and (-webkit-min-device-pixel-ratio: 2)
+and (orientation: landscape) {
+
+}
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 568px)
+  and (-webkit-min-device-pixel-ratio: 2) {
+    .modal{
+      top: 0;
+    }
+    .modal-wrap{
+      margin: auto;
+      top: 0;
+      width: 330px;
+      height: 500px;
+    }
+    .modal-content-container{
+      width: 100%;
+      text-align: left;
+    }
+    .project-used-icon img{
+      width: 25px;
+      height: 25px;
+    }
+   
+}
+
+/* Portrait */
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 568px)
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: portrait) {
+    .modal{
+      top: 0;
+    }
+    .modal-wrap{
+      margin: auto;
+      top: 0;
+      width: 320px;
+      height: 500px;
+    }
+    .modal-content-container{
+      width: 100%;
+      text-align: left;
+    }
+    .project-used-icon img{
+      width: 20px;
+      height: 20px;
+    }
+    
+}
+
+/* Landscape */
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 568px)
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: landscape) {
+
+}
+
 @media only screen and (max-width: 500px){
   .myname{
   font-size: 25px;
@@ -263,11 +397,33 @@ div.project-div:hover .overlayTop{
  .bio p.subtitle{
    font-size: 14px;
  }
-
- footer{
-   height: 20px;
-   font-size: 13px;
- }
+.icon-contact{
+  width: 30px;
+  height: 30px;
+  margin-left: 3.8rem;
+}
+.footer-content{
+  margin: 1rem;
+  padding-left: 1rem;
+  text-align: center;
+}
+.modal{
+  top: 0;
+}
+.modal-wrap{
+  margin: auto;
+  top: 0;
+  width: 380px;
+  height: 600px;
+}
+.modal-content-container{
+  
+  text-align: left;
+}
+.project-used-icon img{
+  width: 20px;
+  height: 20px;
+}
 
 }
 @media only screen and (min-width: 768px){
@@ -294,11 +450,37 @@ div.project-div:hover .overlayTop{
    .content{
      font-size: 25px;
    }
-  
- 
    h1 span{
      font-size: 40px;
    }
+   .footer-container{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  
+  }
+  .icon-contact{
+    width: 40px;
+    height: 40px;
+    margin-left: 3.8rem;
+  
+  }
+  .footer-content{
+    margin: 1rem;
+    padding-left: 10px;
+    text-align: center;
+  }
+  .modal-wrap{
+    margin: auto;
+    width: 650px;
+    height: 750px;
+  }
+  .project-used-icon img{
+    width: 20px;
+    height: 20px;
+  }
+
+
 }
 @media only screen and (min-width: 992px) {
   .media-content p.title{
@@ -323,5 +505,87 @@ div.project-div:hover .overlayTop{
     text-align: center;
     font-size: 20px;
    }
+
+  .icon-contact{
+    width: 30px;
+    height: 30px;
+    margin-left: 3.8rem;
+  }
+  .contact-content{
+    margin:1rem;
+  }
+  .footer-content{
+    margin: 1rem;
+    padding-left: 23px;
+   
+  }
+
+}
+@media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 667px) 
+  and (-webkit-min-device-pixel-ratio: 2) { 
+    .modal{
+      top: 0;
+    }
+    .modal-wrap{
+      margin: auto;
+      top: 0;
+      width: 350px;
+      height: 520px;
+    }
+    .modal-content-container{
+      width: 100%;
+      text-align: left;
+    }
+    .project-used-icon img{
+      width: 20px;
+      height: 20px;
+    }
+
+}
+
+/* Portrait */
+@media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 667px) 
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: portrait) { 
+
+}
+
+/* Landscape */
+@media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 667px) 
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: landscape) { 
+
+}
+/* ----------- iPhone 6+, 7+ and 8+ ----------- */
+
+/* Portrait and Landscape */
+@media only screen 
+  and (min-device-width: 414px) 
+  and (max-device-width: 736px) 
+  and (-webkit-min-device-pixel-ratio: 3) { 
+
+}
+
+/* Portrait */
+@media only screen 
+  and (min-device-width: 414px) 
+  and (max-device-width: 736px) 
+  and (-webkit-min-device-pixel-ratio: 3)
+  and (orientation: portrait) { 
+
+}
+
+/* Landscape */
+@media only screen 
+  and (min-device-width: 414px) 
+  and (max-device-width: 736px) 
+  and (-webkit-min-device-pixel-ratio: 3)
+  and (orientation: landscape) { 
 
 }

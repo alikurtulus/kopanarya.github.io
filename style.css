@@ -12,6 +12,7 @@ body {
   overflow: hidden;
  }
 canvas { display: block; }
+
 .navbar{
   background-color: black !important;
   border:none;

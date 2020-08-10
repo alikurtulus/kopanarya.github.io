@@ -1,4 +1,8 @@
  console.log('Connected')
+ AOS.init({
+   offset:400,
+   duration:1200
+ });
  let scene, camera, renderer, startGeo, stars, selectedIcon,urlIcon, learnMoreLink,chosenProject,leftArrow,rightArrow, slides,slider,usedTechnologies 
  const typeWriter = document.getElementById('type-writer')
  const dataText = typeWriter.getAttribute('data-text')

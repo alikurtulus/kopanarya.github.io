@@ -3,6 +3,7 @@
    offset:400,
    duration:1200
  });
+ window.addEventListener('load', AOS.refresh)
  let scene, camera, renderer, startGeo, stars, selectedIcon,urlIcon, learnMoreLink,chosenProject,leftArrow,rightArrow, slides,slider,usedTechnologies 
  const typeWriter = document.getElementById('type-writer')
  const dataText = typeWriter.getAttribute('data-text')

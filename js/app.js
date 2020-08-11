@@ -158,7 +158,7 @@ const createProjectsView = (selectedArr) => {
     mainDiv.style.cssText="width:350px;height:380px;margin:1rem 1rem;display:inline-block;position:relative;"
     projectImg.setAttribute('src',selectedArr[i]['imgUrl'])
     projectImg.className="project-img"
-    projectImg.style.cssText="width:380px;height:370px;display:block; "
+    projectImg.style.cssText="width:400px;height:370px;display:block; "
     learnMoreLink.addEventListener('click', (e) => {
       selectedProject(e.target.id)
     })
@@ -213,7 +213,7 @@ const createCarousel = (sliderImages)=> {
     const img = document.createElement('img')
     item.className="image item"
     img.setAttribute('src','images/'+chosenProject["imgFolder"]+'/'+sliderImages[i])
-    img.style.cssText="width:600px;height:320px;"
+    img.style.cssText="width:670px;height:320px;"
     item.appendChild(img)
     sliderItems.appendChild(item)
   }

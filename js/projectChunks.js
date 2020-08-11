@@ -73,7 +73,7 @@
     link:"http://alikurtulush.dev/VueJSTodo/",
     github:"https://github.com/kopanarya/VueJSTodo",
     category:"other",
-    imgUrl:"images/vuequiz/vuequiz-screen.png",
+    imgUrl:"images/vuejstodo/vuetodo-screen.png",
     projectTitle:"VueJSTodo",
     imgFolder:"vuejstodo",
     projectImagesArr:["vuetodo-screen.png","vuetodo-second.png","vuetodo-third.png"],

@@ -90,6 +90,17 @@
     projectImagesArr:["dadjokes-screen.png","dadjokes-second.png"],
     description:"I built dadjokes app to make you a bit happier.",
     usedTecnologies:["js-icon.png","css3-icon.png","html-5.png","github-icon.png","react-icon.png","api-icon.png"]
+  },
+  {
+    link:"http://alikurtulush.dev/Tetris/",
+    github:"https://github.com/kopanarya/Tetris",
+    category:"gaming",
+    imgUrl:"images/tetris/tetris-screen.png",
+    projectTitle:"Tetris",
+    imgFolder:"tetris",
+    projectImagesArr:["tetris-screen.png","tetris-second.png","tetris-third.png"],
+    description:"I recreated the tetris game with my version.I hope you're enjoy.",
+    usedTecnologies:["js-icon.png","css3-icon.png","html-5.png","github-icon.png",]
   }
 
   ]

@@ -58,7 +58,7 @@
       projectImagesArr:["hangman-screen.png","hangman-second.png","hangman-third.png"],
       description:"I recreated hangman with pure vanilla.JS. ",
       usedTecnologies:["js-icon.png","css3-icon.png","html-5.png","github-icon.png"]
-  },
+  }
 
   ]
     const skillsIcon = ["api-icon.png","bootstrap-logo.png","css3-icon.png","github-icon.png","html-5.png","sass-icon.png","npm-icon.png","js-icon.png","npm-icon.png","python-icon.png","react-icon.png","webpack-icon.png","yarnpkg-icon.png","nodejs-icon.png","mongodb-icon.png","vue.js.png","postgresql-icon.png","aws-icon.png","jira-icon.png","django-icon.png"]

@@ -52,12 +52,33 @@
     { link:"https://alikurtulush.dev/HangmanApp/",
       github:"https://github.com/kopanarya/HangmanApp",
       category:"gaming",
-      imgUrl:"images/hangman/hangman-screen.png",
+      imgUrl:"images/hangman/hangman-second.png",
       projectTitle:"HangmanApp",
       imgFolder:"hangman",
-      projectImagesArr:["hangman-screen.png","hangman-second.png","hangman-third.png"],
+      projectImagesArr:["hangman-second.png","hangman-screen.png","hangman-third.png"],
       description:"I recreated hangman with pure vanilla.JS. ",
       usedTecnologies:["js-icon.png","css3-icon.png","html-5.png","github-icon.png"]
+  },
+  {  link:"https://alikurtulush.dev/VueJSQuiz/",
+     github:"https://github.com/kopanarya/VueJSQuiz",
+     category:"gaming",
+     imgUrl:"images/vuequiz/vuequiz-screen.png",
+     projectTitle:"VueJSQuiz",
+     imgFolder:"vuequiz",
+     projectImagesArr:["vuequiz-screen.png","vuequiz-second.png","vuequiz-third.png"],
+     description:"I built quiz app for quiz lover with Vue.js",
+     usedTecnologies:["js-icon.png","css3-icon.png","html-5.png","github-icon.png","vue-icon.png"]
+  },
+  {
+    link:"http://alikurtulush.dev/VueJSTodo/",
+    github:"https://github.com/kopanarya/VueJSTodo",
+    category:"other",
+    imgUrl:"images/vuejstodo/vuetodo-screen.png",
+    projectTitle:"VueJSTodo",
+    imgFolder:"vuejstodo",
+    projectImagesArr:["vuetodo-screen.png","vuetodo-second.png","vuetodo-third.png"],
+    description:"I built todo app for for planner   with Vue.js",
+    usedTecnologies:["js-icon.png","css3-icon.png","html-5.png","github-icon.png","vue-icon.png"]
   }
 
   ]

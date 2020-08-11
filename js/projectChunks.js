@@ -67,7 +67,7 @@
      imgFolder:"vuequiz",
      projectImagesArr:["vuequiz-screen.png","vuequiz-second.png","vuequiz-third.png"],
      description:"I built quiz app for quiz lover with Vue.js",
-     usedTecnologies:["js-icon.png","css3-icon.png","html-5.png","github-icon.png","vue-icon.png"]
+     usedTecnologies:["js-icon.png","css3-icon.png","html-5.png","github-icon.png","vue-icon.png","api-icon.png"]
   },
   {
     link:"http://alikurtulush.dev/VueJSTodo/",
@@ -78,7 +78,7 @@
     imgFolder:"vuejstodo",
     projectImagesArr:["vuetodo-screen.png","vuetodo-second.png","vuetodo-third.png"],
     description:"I built todo app for for planner   with Vue.js",
-    usedTecnologies:["js-icon.png","css3-icon.png","html-5.png","github-icon.png","react-icon.png","api-icon.png"]
+    usedTecnologies:["js-icon.png","css3-icon.png","html-5.png","github-icon.png","vue-icon.png"]
   },
   {
     link:"http://alikurtulush.dev/DadJokesApp/",
@@ -89,7 +89,7 @@
     imgFolder:"dadjokes",
     projectImagesArr:["dadjokes-screen.png","dadjokes-second.png"],
     description:"I built dadjokes app to make you a bit happier.",
-    usedTecnologies:["js-icon.png","css3-icon.png","html-5.png","github-icon.png"]
+    usedTecnologies:["js-icon.png","css3-icon.png","html-5.png","github-icon.png","react-icon.png","api-icon.png"]
   }
 
   ]

@@ -38,5 +38,16 @@
       projectImagesArr:["travelonar-screen.png","travelonar-second.png","travelonar-third.png","travelonar-fourth.png","travelonar-fifth.png","travelonar-sixth.png","travelonar-seventh.png"],
       description:"My project was a city guide for the traveller. User can type a city name and get pieces of information about news, restaurants, events, landmarks, stories, nightlife.",
       usedTecnologies:["js-icon.png","css3-icon.png","html-5.png","github-icon.png","python-icon.png","react-icon.png","postgresql-icon.png","api-icon.png"]
-    }]
+    },
+    { link:"https://5f32d65d1d8cb5c457cc22f3--quizzical-goldstine-594e6d.netlify.app/",
+      github:"https://github.com/kopanarya/SocketIOChat",
+      category:"other",
+      imgUrl:"images/socketio/chat-screen.png",
+      projectTitle:"SocketIOChat",
+      imgFolder:"socketio",
+      projectImagesArr:["chat-screen.png","chat-second.png","chat-third.png"],
+      description:"My project is a chat live chat program. You can chat your friend easily and privately. ",
+      usedTecnologies:["js-icon.png","css3-icon.png","html-5.png","github-icon.png","react-icon.png","api-icon.png","nodejs-icon.png","npm-icon.png","socketio-icon.png"]
+    }
+  ]
     const skillsIcon = ["api-icon.png","bootstrap-logo.png","css3-icon.png","github-icon.png","html-5.png","sass-icon.png","npm-icon.png","js-icon.png","npm-icon.png","python-icon.png","react-icon.png","webpack-icon.png","yarnpkg-icon.png","nodejs-icon.png","mongodb-icon.png","vue.js.png","postgresql-icon.png","aws-icon.png","jira-icon.png","django-icon.png"]

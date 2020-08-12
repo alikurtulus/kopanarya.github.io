@@ -20,11 +20,8 @@
  const projectsContainer = document.getElementById('projects-container')
  let selectedCategory = []
  let index = 0
-
-
 let count = 0
 const dataTextLength = dataText.length
-
 const init = () => {
 scene = new THREE.Scene();
 camera = new THREE.PerspectiveCamera(60,window.innerWidth/window.innerHeight,1,1000)
@@ -46,9 +43,7 @@ const createSkills = () => {
     skillsContainer.appendChild(skillContainer)
   }
 }
-
 createSkills()
-
 startGeo = new THREE.Geometry()
 for(let i=0; i< 6000; i++){
     let star = new THREE.Vector3(
@@ -157,8 +152,9 @@ const createProjectsView = (selectedArr) => {
     mainDiv.className="column is-full-mobile is-one-third-desktop project-div"
     mainDiv.style.cssText="width:350px;height:380px;margin:1rem 1rem;display:inline-block;position:relative;"
     projectImg.setAttribute('src',selectedArr[i]['imgUrl'])
+
     projectImg.className="project-img"
-    projectImg.style.cssText="width:400px;height:370px;display:block; "
+    projectImg.style.cssText="width:500px;height:400px;object-fit:cover;object-position:50% 50%; "
     learnMoreLink.addEventListener('click', (e) => {
       selectedProject(e.target.id)
     })
@@ -166,7 +162,9 @@ const createProjectsView = (selectedArr) => {
     textContainer.appendChild(learnMoreLink)
     mainDiv.appendChild(projectImg)
     mainDiv.appendChild(textContainer)
+    mainDiv.setAttribute('data-aos','fade')
     projectsContainer.appendChild(mainDiv)
+ 
     
   }
 }
@@ -212,8 +210,9 @@ const createCarousel = (sliderImages)=> {
     const item = document.createElement("div")
     const img = document.createElement('img')
     item.className="image item"
-    img.setAttribute('src','images/'+chosenProject["imgFolder"]+'/'+sliderImages[i])
-    img.style.cssText="width:670px;height:320px;"
+    let imgUrl = chosenProject["imgFolder"]+'/'+sliderImages[i]
+    img.style.cssText="width: 100%;height:360px; object-fit:cover;object-position:50% 50%;"
+    img.setAttribute('src',"images/"+imgUrl)
     item.appendChild(img)
     sliderItems.appendChild(item)
   }

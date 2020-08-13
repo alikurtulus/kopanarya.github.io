@@ -222,6 +222,7 @@ const createCarousel = (sliderImages)=> {
   leftArrow.onclick = function(){
     next('prev')
   }
+  //Movement for carousel.
   const next = (direction) => {
     if(direction === "next"){
       index++

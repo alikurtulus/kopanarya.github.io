@@ -30,7 +30,6 @@ camera.rotation.x = Math.PI/2
 renderer = new THREE.WebGLRenderer();
 renderer.setSize(window.innerWidth,window.innerHeight);
 bestHero.appendChild(renderer.domElement);
-
 // Create skills icon
 const createSkills = () => {
   for(let i=0;i<skillsIcon.length;i++){
@@ -131,7 +130,6 @@ const changeFontColor= (selectedOne,otherSecond,otherThird,otherFourth) =>{
   otherThird.style.cssText="color:darkslategray;"
   otherFourth.style.cssText="color:darkslategray;"
 }
-
 const createProjectsView = (selectedArr) => {
   // We get category's projects and make a section about it.
   for(let i=0;i<selectedArr.length;i++){
@@ -152,7 +150,6 @@ const createProjectsView = (selectedArr) => {
     mainDiv.className="column is-full-mobile is-one-third-desktop project-div"
     mainDiv.style.cssText="width:350px;height:380px;margin:1rem 1rem;display:inline-block;position:relative;"
     projectImg.setAttribute('src',selectedArr[i]['imgUrl'])
-
     projectImg.className="project-img"
     projectImg.style.cssText="width:500px;height:400px;object-fit:cover;object-position:50% 50%; "
     learnMoreLink.addEventListener('click', (e) => {
@@ -164,8 +161,6 @@ const createProjectsView = (selectedArr) => {
     mainDiv.appendChild(textContainer)
     mainDiv.setAttribute('data-aos','fade')
     projectsContainer.appendChild(mainDiv)
- 
-    
   }
 }
 const selectedProject = (id) => {

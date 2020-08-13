@@ -262,12 +262,10 @@ modalContainer.className="modal"
 modalContainer.id="page-modal"
 modalContainer.appendChild(modalBackground)
 modalContainer.appendChild(btnClose)
-
 //Card Element Defines
 const modalCard = document.createElement('div')
 const modalImgContainer = document.createElement('div')
 const imgContainer = document.createElement('div')
-
 const btnViewCode = document.createElement('a')
 const btnViewSite = document.createElement('a')
 const cardContent = document.createElement('div')
@@ -276,7 +274,6 @@ const contentTitle = document.createElement('h3')
 const miniContent = document.createElement('div')
 const divider = document.createElement('br')
 const techTitle = document.createElement('h4')
-
 // Give classNames and attributes for the element of card component.
 modalCard.className="card"
 modalImgContainer.className="card-image"
@@ -313,7 +310,6 @@ modalWrap.appendChild(modalCard)
 modalContent.appendChild(modalWrap)
 modalContainer.appendChild(modalContent)
 projectsContainer.appendChild(modalContainer)
-
 modalContainer.style.display="block"
 // When We want to close modal component
    btnClose.onclick = function(){

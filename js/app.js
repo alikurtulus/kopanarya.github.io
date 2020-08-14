@@ -42,6 +42,7 @@ const createSkills = () => {
     skillsContainer.appendChild(skillContainer)
   }
 }
+// Create skills icon for about the section.
 createSkills()
 startGeo = new THREE.Geometry()
 for(let i=0; i< 6000; i++){

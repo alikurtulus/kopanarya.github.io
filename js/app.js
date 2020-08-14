@@ -130,6 +130,7 @@ const changeFontColor= (selectedOne,otherSecond,otherThird,otherFourth) =>{
   otherThird.style.cssText="color:darkslategray;"
   otherFourth.style.cssText="color:darkslategray;"
 }
+// Create Projects View
 const createProjectsView = (selectedArr) => {
   // We get category's projects and make a section about it.
   for(let i=0;i<selectedArr.length;i++){
@@ -163,6 +164,7 @@ const createProjectsView = (selectedArr) => {
     projectsContainer.appendChild(mainDiv)
   }
 }
+// When user click the project.
 const selectedProject = (id) => {
   for(let i=0;i<projectChunks.length;i++){
     if(projectChunks[i]['projectTitle'] === id){
@@ -173,6 +175,7 @@ const selectedProject = (id) => {
   usedTechnologies = createUsedTech(chosenProject['usedTecnologies'])
   createModal(chosenProject)
 }
+//Create Projects View
 createProjectsView(projectChunks)
 const createUsedTech = (usedTechArr) => {
   const usedTechContainer = document.createElement('div')
@@ -182,7 +185,6 @@ const createUsedTech = (usedTechArr) => {
     const usedTechItemImg = document.createElement('img')
     usedTechItemImg.setAttribute('src','images/skills/'+usedTechArr[i])
     techItem.className="column  project-used-icon   "
-
     techItem.appendChild(usedTechItemImg)
     usedTechContainer.appendChild(techItem)
   }
@@ -313,7 +315,7 @@ modalContainer.appendChild(modalContent)
 projectsContainer.appendChild(modalContainer)
 modalContainer.style.display="block"
 // When We want to close modal component
-   btnClose.onclick = function(){
+  btnClose.onclick = function(){
       modalContainer.style.display="none"
   }
 // When We click  the out of modal component

@@ -102,6 +102,17 @@ let projectChunks = [
     projectImagesArr:["tetris-screen.png","tetris-second.png","tetris-third.png"],
     description:"I recreated the tetris game with my version.I hope you're enjoy.",
     usedTecnologies:["js-icon.png","css3-icon.png","html-5.png","github-icon.png",]
+  },
+  {
+    link:"http://alikurtulush.dev/SpaceInvaders/",
+    github:"https://github.com/kopanarya/SpaceInvaders",
+    category:"gaming",
+    imgUrl:"images/spaceinvaders/space-invaders-screen.png",
+    projectTitle:"SpaceInvaders",
+    imgFolder:"spaceinvaders",
+    projectImagesArr:["space-invaders-screen.png","space-invaders-second.png","space-invaders-three.png","space-invaders-fourth.png"],
+    description:"I recreated the spaceinvaders game with my version.I hope you're enjoy.",
+    usedTecnologies:["js-icon.png","css3-icon.png","html-5.png","github-icon.png",]
   }
 ]
 //Skills img name

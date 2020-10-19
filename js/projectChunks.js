@@ -121,7 +121,7 @@ let projectChunks = [
     imgUrl:"images/whatsapp/whatsapp-screen.png",
     projectTitle:"WhatsAppClone",
     imgFolder:"whatsapp",
-    projectImagesArr:["whatsapp-screen.png","whatsapp-second.png","whatsapp-invaders-three.png"],
+    projectImagesArr:["whatsapp-screen.png","whatsapp-second.png","whatsapp-third.png"],
     description:"I recreated whatsappclone, so you can use this app to message your friend on this. ",
     usedTecnologies:["js-icon.png","css3-icon.png","html-5.png","github-icon.png","react-icon.png","firebase-icon.png"]
   }

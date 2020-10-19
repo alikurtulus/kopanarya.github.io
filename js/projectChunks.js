@@ -104,7 +104,7 @@ let projectChunks = [
     usedTecnologies:["js-icon.png","css3-icon.png","html-5.png","github-icon.png",]
   },
   {
-    link:" https://thirsty-neumann-56d14f.netlify.app",
+    link:"https://thirsty-neumann-56d14f.netlify.app/",
     github:"https://github.com/kopanarya/SpaceInvaders",
     category:"gaming",
     imgUrl:"images/spaceinvaders/space-invaders-screen.png",

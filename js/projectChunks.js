@@ -113,7 +113,18 @@ let projectChunks = [
     projectImagesArr:["space-invaders-screen.png","space-invaders-second.png","space-invaders-three.png","space-invaders-fourth.png"],
     description:"I recreated the spaceinvaders game with my version.I hope you're enjoy.",
     usedTecnologies:["js-icon.png","css3-icon.png","html-5.png","github-icon.png",]
+  },
+  {
+    link:"https://whatsappclone-43b8f.web.app/",
+    github:"https://github.com/kopanarya/WhatsAppClone",
+    category:"fullStack",
+    imgUrl:"images/whatsapp/whatsapp-screen.png",
+    projectTitle:"WhatsAppClone",
+    imgFolder:"whatsapp",
+    projectImagesArr:["whatsapp-screen.png","whatsapp-second.png","whatsapp-invaders-three.png"],
+    description:"I recreated whatsappclone, so you can use this app to message your friend on this. ",
+    usedTecnologies:["js-icon.png","css3-icon.png","html-5.png","github-icon.png","react-icon.png","firebase-icon.png"]
   }
 ]
 //Skills img name
-const skillsIcon = ["api-icon.png","bootstrap-logo.png","css3-icon.png","github-icon.png","html-5.png","sass-icon.png","npm-icon.png","js-icon.png","npm-icon.png","python-icon.png","react-icon.png","webpack-icon.png","yarnpkg-icon.png","nodejs-icon.png","mongodb-icon.png","vue-icon.png","postgresql-icon.png","aws-icon.png","jira-icon.png","django-icon.png"]
+const skillsIcon = ["api-icon.png","bootstrap-logo.png","css3-icon.png","github-icon.png","html-5.png","sass-icon.png","npm-icon.png","js-icon.png","npm-icon.png","python-icon.png","react-icon.png","webpack-icon.png","yarnpkg-icon.png","nodejs-icon.png","mongodb-icon.png","vue-icon.png","postgresql-icon.png","aws-icon.png","jira-icon.png","django-icon.png","firebase-icon.png"]

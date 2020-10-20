@@ -130,11 +130,15 @@ nav .animation{
  justify-content: center;
  align-items: center;
  margin: auto;
+ 
 }
 .myphoto{
-  border-radius: 8px;
-  width: 320px;
-  height: 320px;
+  border-radius:50%;
+  width: 350px;
+  height: 350px;
+  -moz-box-shadow: 0 0 5px 5px #888;
+  -webkit-box-shadow: 0 0 5px 5px#888;
+  box-shadow: 0 0 5px 5px #888;
 }
 .question-guy{
   color:#363636 !important;
@@ -142,6 +146,7 @@ nav .animation{
 .skill{
   width: 50px;
   height: 40px;
+  
 }
 .myname{
   border-bottom: 4px solid black;
@@ -151,7 +156,10 @@ div.project-div img{
   -webkit-filter: grayscale(0) blur(0);
 	filter: grayscale(0) blur(0);
 	-webkit-transition: .1s ease-in-out;
-	transition: .2s ease-in-out;
+  transition: .2s ease-in-out;
+  -moz-box-shadow: 0 0 5px 5px #888;
+-webkit-box-shadow: 0 0 5px 5px#888;
+box-shadow: 0 0 5px 5px #888;
 }
 div.project-div:hover img{
   -webkit-filter: grayscale(100%) blur(14px);
